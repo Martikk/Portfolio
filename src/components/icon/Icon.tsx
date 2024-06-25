@@ -6,12 +6,12 @@ type IconPropsType = {
     width?: string;
     height?: string;
     viewBox?: string;
-    marginTop?: string; // Новый пропс для отступа сверху
+    margin?: string
 }
 
-const Icon = ({ iconId, width, height, viewBox, marginTop }: IconPropsType) => {
+const Icon = ({ iconId, width, height, viewBox, margin }: IconPropsType) => {
     const styles = {
-        marginTop: marginTop || '0', // Используем новый пропс
+        margin: margin || "0",
     };
 
     return (

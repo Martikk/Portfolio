@@ -1,21 +1,16 @@
 import React from 'react';
-import styled, { css } from "styled-components";
 import Logo from "../../components/logo/Logo";
 import Menu from "../../components/menu/Menu";
 import SteledLinkIconHeader from "../../components/steledLinkIconHeader/SteledLinkIconHeader";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
 export const Header = () => {
     return (
-        <Styledheader>
-            <SteledLinkIconHeader/>
-<Logo/>
-<Menu/>
-        </Styledheader>
+        <FlexWrapper direction={"row"} justify={"space-between"}>
+                <SteledLinkIconHeader/>
+                <Logo/>
+                <Menu/>
+            </FlexWrapper>
     );
 };
 
-const Styledheader = styled.header `
-    background-color: ${({theme}) => theme.colors.backgroundDark} ;
-    display: flex;
-    justify-content: space-between;
-`

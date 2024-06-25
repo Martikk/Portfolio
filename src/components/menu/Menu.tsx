@@ -26,6 +26,11 @@ ul {
     margin-top: 32px;
 }
 a{
-    text-decoration: none; 
+    text-decoration: none;
+    color: ${({theme})=>theme.colors.gray};
+    :hover {
+        color: ${({theme})=>theme.colors.white};
+        transition: color 0.3s ease;
+    }
 };
 `
