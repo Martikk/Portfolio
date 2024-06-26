@@ -16,7 +16,7 @@ import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 const Projects = () => {
     return (
         <ProjectSection>
-            <FlexWrapper padding={"106px 100px 0 100px"}>
+            <FlexWrapper padding={"106px 100px 0 100px"} >
                 <FlexWrapper direction={"row"} justify={"space-between"} >
                     <FlexWrapper direction={"row"} alignItems={"center"} gap={"16px"} >
                         <SectionTitle><SpanStyle spanColor={"primary"}>#</SpanStyle>projects</SectionTitle>

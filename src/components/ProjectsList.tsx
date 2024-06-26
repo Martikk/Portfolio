@@ -34,7 +34,7 @@ const data = [
 
 const ProjectsList = () => {
     return (
-<FlexWrapper direction={"row"} wrap={"wrap"}>
+<FlexWrapper direction={"row"} wrap={"wrap"} justify={"space-between"}>
 
             {data.map((project, index) => (
                 <ProjectCard

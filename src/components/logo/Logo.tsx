@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon from "../icon/Icon";
-import styled from "styled-components";
 import {FlexLink} from "../FlexLink";
 import {SpanStyle} from "../SpanStyle";
 

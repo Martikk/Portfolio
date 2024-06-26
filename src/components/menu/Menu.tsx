@@ -1,15 +1,15 @@
 import React from 'react';
-import styled, { css } from "styled-components";
+import styled  from "styled-components";
 import {SpanStyle} from "../SpanStyle";
 
 const Menu = () => {
     return (
         <SteledMenu>
             <ul>
-                <li><a href="#"><SpanStyle spanColor={"primary"}>#</SpanStyle>home</a></li>
-                <li><a href="#"><SpanStyle spanColor={"primary"}>#</SpanStyle>works</a></li>
-                <li><a href="#"><SpanStyle spanColor={"primary"}>#</SpanStyle>about-me</a></li>
-                <li><a href="#"><SpanStyle spanColor={"primary"}>#</SpanStyle>contacts</a></li>
+                <li><a href="/home"><SpanStyle spanColor={"primary"}>#</SpanStyle>home</a></li>
+                <li><a href="/works"><SpanStyle spanColor={"primary"}>#</SpanStyle>works</a></li>
+                <li><a href="/about-me"><SpanStyle spanColor={"primary"}>#</SpanStyle>about-me</a></li>
+                <li><a href="/contacts"><SpanStyle spanColor={"primary"}>#</SpanStyle>contacts</a></li>
             </ul>
         </SteledMenu>
     );
