@@ -8,6 +8,10 @@ type FlexWrapperProps = {
     padding?: string
     gap?: string
     border?:string
+    borderColor?: string;
+    width?: string
+    height?: string
+    spanColor?: string
 }
 
 
@@ -18,6 +22,12 @@ flex-direction: ${props => props.direction || "column"};
 align-items: ${props => props.alignItems || "stretch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
     padding: ${props => props.padding || "0"};
-    border: ${props => props.border || "none"};
-    gap: ${props => props.gap || "0"}
+    gap: ${props => props.gap || "0"};
+    border: 1px solid ${(props)=> props.theme.colors[props.borderColor as keyof typeof props.theme.colors] || props.borderColor ||"none"};
+    width: ${props => props.width || "auto"};
+    height: ${props => props.height || "auto"};
+    
+    span {
+        color: ${props=> props.theme.colors[props.spanColor as keyof typeof props.theme.colors] ||props.spanColor || "#FFFFFF"}; ;
+    }
 `

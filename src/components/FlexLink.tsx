@@ -10,6 +10,9 @@ type FlexLinkProps = {
     border?:string
     decoration?: string
     content?: string
+    width?: string
+    height?: string
+    borderColor?: string;
 }
 
 
@@ -24,4 +27,7 @@ align-items: ${props => props.alignItems || "stretch"};
     gap: ${props => props.gap || "0"};
     text-decoration: ${props => props.decoration || "none"};
     align-content: ${props => props.alignItems || "center"};
+    width: ${props => props.width || "auto"};
+    height:${props => props.height || "auto"};
+    border: 1px solid ${(props)=> props.theme.colors[props.borderColor as keyof typeof props.theme.colors] || props.borderColor ||"none"};
 `
