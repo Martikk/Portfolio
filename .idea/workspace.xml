@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6994b4cb-8c82-4f90-8579-764d2d93afeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/project/ProjectDivImg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/header/StyledLinkIconHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/Rectangle 23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/other/Dots.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/other/Line 7 (Stroke).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextP.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextP.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/section/projects/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/projects/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/SteledLinkIconHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +44,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "npm.deploy.executor": "Run",
+    "npm.predeploy.executor": "Run",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "editor.preferences.completion",
     "ts.external.directory.path": "/Users/User/Documents/GitHub/portfolio-start-project/node_modules/typescript/lib",
@@ -65,11 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src/styles/components" />
+      <recent name="$PROJECT_DIR$/src/layout/header" />
+      <recent name="$PROJECT_DIR$/src/components/skills" />
       <recent name="$PROJECT_DIR$/src/components/project" />
-      <recent name="$PROJECT_DIR$/src/assets/img" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/assets/frame" />
-      <recent name="$PROJECT_DIR$/src/layout/section/main" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -78,6 +75,16 @@
       <command value="run" />
       <scripts>
         <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -96,6 +103,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -116,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718839755356</updated>
       <workItem from="1718839756394" duration="10346000" />
-      <workItem from="1719260066456" duration="66809000" />
+      <workItem from="1719260066456" duration="68307000" />
     </task>
     <servers />
   </component>

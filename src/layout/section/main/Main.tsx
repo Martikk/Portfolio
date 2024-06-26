@@ -7,6 +7,7 @@ import {ButtonStyled} from "../../../styles/Button .styled";
 import {SpanStyle} from "../../../components/SpanStyle";
 import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 import {RelativeDiv} from "../../../components/RelativeDiv";
+import {FlexLink} from "../../../components/FlexLink";
 
 const Main = () => {
     return (
@@ -27,7 +28,7 @@ const Main = () => {
                         </AbsoluteDiv>
                     </RelativeDiv>
                     <FlexWrapper padding={"0 0 0 20px"} >
-                        <FlexWrapper padding={"8px"} direction={"row"}  gap={"10px"} borderColor={"gray"} width={"402px"} ><Icon iconId={'rectanglecolor'} width="16" height="17" viewBox="0 0 16 17"/>Currently working on <SpanStyle>Portfolio</SpanStyle></FlexWrapper>
+                        <FlexWrapper padding={"8px"} direction={"row"}  gap={"10px"} borderColor={"gray"} width={"402px"} ><Icon iconId={'rectanglecolor'} width="16" height="17" viewBox="0 0 16 17"/>Currently working on <FlexLink href={"https://martikk.github.io/Portfolio/"}>Portfolio</FlexLink></FlexWrapper>
                     </FlexWrapper>
                     </FlexWrapper>
             </FlexWrapper>
