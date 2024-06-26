@@ -12,7 +12,8 @@ const data = [
         description: 'Ecommerce project',
         linkLiveVersion: 'https://dreamydates.ca',
         linkGitHub: 'https://github.com/Martikk/DreamyDates',
-        background: DreamDate,
+        src: DreamDate,
+        altForImg: 'Home screenshot for project Dream Date '
     },
     {
         languages: ['TypeScript','SCCS', 'Reactjs', 'JavaScript','Nodejs','Express','AWS','NPN Library',],
@@ -20,7 +21,8 @@ const data = [
         description: 'BranFlex Video Sharing Platform Enhancement',
         linkLiveVersion: 'https://master.d3hz3i03c78cd3.amplifyapp.com/',
         linkGitHub: 'https://github.com/Martikk/BrainFlix',
-        background: Video,
+        src: Video,
+        altForImg: 'Home screenshot for project Dream Date '
     },
     {
         languages: ['TypeScript','SCCS', 'Reactjs', 'JavaScript','Nodejs','Express','AWS','NPN Library',],
@@ -28,7 +30,8 @@ const data = [
         description: 'Todo List project',
         linkLiveVersion: 'https://main.d3sufhpecf7yrr.amplifyapp.com/',
         linkGitHub: 'https://github.com/Martikk/todo-frontend',
-        background: Todo,
+        src: Todo,
+        altForImg: 'Home screenshot for project Dream Date '
     },
 ];
 
@@ -39,12 +42,13 @@ const ProjectList = () => {
             {data.map((project, index) => (
                 <ProjectCard
                     key={index}
-                    background={project.background}
+                    src={project.src}
                     title={project.title}
                     description={project.description}
                     languages={project.languages}
                     linkLiveVersion={project.linkLiveVersion}
                     linkGitHub={project.linkGitHub}
+                    altForImg={project.altForImg}
                 />
             ))}
 </FlexWrapper>

@@ -2,36 +2,43 @@ import React from 'react';
 import styled  from "styled-components";
 import {SpanStyle} from "../SpanStyle";
 
-const Menu = () => {
+type MenuItem = {
+    name: string;
+    href: string;
+};
+
+export const Menu = (props: { menuItems: Array<MenuItem> }) => {
     return (
         <SteledMenu>
             <ul>
-                <li><a href="/home"><SpanStyle spanColor={"primary"}>#</SpanStyle>home</a></li>
-                <li><a href="/works"><SpanStyle spanColor={"primary"}>#</SpanStyle>works</a></li>
-                <li><a href="/about-me"><SpanStyle spanColor={"primary"}>#</SpanStyle>about-me</a></li>
-                <li><a href="/contacts"><SpanStyle spanColor={"primary"}>#</SpanStyle>contacts</a></li>
+                {props.menuItems.map((item, index) => (
+                    <li key={index}>
+                        <SpanStyle spanColor="primary">#</SpanStyle>
+                        <a href={item.href}>{item.name}</a>
+                    </li>
+                ))}
             </ul>
         </SteledMenu>
     );
 };
 
-export default Menu;
 
 const SteledMenu = styled.nav`
-ul {
-    display: flex;
-    gap: 30px;
-    justify-content: flex-end;
-    padding-right: 171px;
-    list-style: none;
-    margin-top: 32px;
-}
-a{
-    text-decoration: none;
-    color: ${(props) => props.color || "#ABB2BF"};
-    
-    :hover {
-        color: ${(props) => props.color || "#fff"};
+    ul {
+        display: flex;
+        gap: 30px;
+        justify-content: flex-end;
+        padding-right: 171px;
+        list-style: none;
+        margin-top: 32px;
+    }
+
+    a {
+        text-decoration: none;
+        color: ${(props) => props.color || "#ABB2BF"};
+
+        :hover {
+            color: ${(props) => props.color || "#fff"};
         transition: color 0.3s ease;
     }
 };

@@ -5,32 +5,35 @@ import { TextP } from "../TextP";
 import { TextH3 } from "../TextH3";
 import { FaGitSquare } from "react-icons/fa";
 import { SiKdenlive } from "react-icons/si";
-import {ProjectDivImg} from "./ProjectDivImg";
+import {ProjectImg} from "./ProjectImg";
 
 
 
 type ProjectCardProps = {
-    background?: string;
+    src?: string;
     title: string;
     description: string;
     languages: string[];
     linkLiveVersion: string;
     linkGitHub: string;
+    altForImg: string;
 };
 
 const ProjectCard = ({
-                         background,
+                         src,
                          title,
                          description,
                          languages = [],
                          linkLiveVersion,
-                         linkGitHub
+                         linkGitHub,
+                         altForImg
                      }: ProjectCardProps) => {
     return (
         <FlexWrapper padding={"48px 0 0 100px"}>
             <FlexWrapper width={"250px"} borderColor={"gray"}>
-                <ProjectDivImg
-                    background={background}
+                <ProjectImg
+                    src={src}
+                    alt={altForImg}
                 />
                 <TextP borderColor={"gray"} padding={"8px"}>{languages.join(' ')}</TextP>
                 <FlexWrapper padding={"16px"}>

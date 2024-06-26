@@ -1,6 +1,5 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {RelativeDiv} from "../../../components/RelativeDiv";
 import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 import Icon from "../../../components/icon/Icon";
 import {SpanStyle} from "../../../components/SpanStyle";

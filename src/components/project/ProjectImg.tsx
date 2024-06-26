@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-type ProjectDivImgProps = {
+type ProjectImgProps = {
     width?: string;
     height?: string;
     padding?: string;
     gap?: string;
     borderColor?: string;
-    background?: string;
     backgroundSize?: string;
+    src?: string;
+    alt: string;
 };
 
-export const ProjectDivImg = styled.div<ProjectDivImgProps>`
+export const ProjectImg = styled.img<ProjectImgProps>`
     width: ${props => props.width || '250px'};
     height: ${props => props.height || '121px'};
     border: 1px solid ${props => props.theme.colors[props.borderColor as keyof typeof props.theme.colors] || props.borderColor || "gray"};
-    background-image: ${props => `url(${props.background})` || 'none'};
+    src: ${props => props.src || ""};
     background-size: ${props => props.backgroundSize || 'cover'};
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     :hover {
