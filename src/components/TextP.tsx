@@ -3,6 +3,7 @@ import styled from "styled-components";
 type TextPProps = {
     borderColor?: string
     padding?: string
+    margin?: string
 };
 
 export const TextP = styled.p<TextPProps>`

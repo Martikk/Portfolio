@@ -4,7 +4,7 @@ import {RelativeDiv} from "../../../components/RelativeDiv";
 import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 import Icon from "../../../components/icon/Icon";
 import {SpanStyle} from "../../../components/SpanStyle";
-import SkillsData from "../../../components/SkillsData";
+import SkillsData from "../../../components/skills/SkillsData";
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 

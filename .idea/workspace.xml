@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6994b4cb-8c82-4f90-8579-764d2d93afeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/project/ProjectDivImg.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SkillsData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SkillsData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logo/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/Rectangle 23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/other/Dots.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/other/Line 7 (Stroke).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextP.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextP.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/section/projects/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/projects/Projects.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/project" />
       <recent name="$PROJECT_DIR$/src/assets/img" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/assets/frame" />
       <recent name="$PROJECT_DIR$/src/layout/section/main" />
-      <recent name="$PROJECT_DIR$/src/layout/header" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -114,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718839755356</updated>
       <workItem from="1718839756394" duration="10346000" />
-      <workItem from="1719260066456" duration="61539000" />
+      <workItem from="1719260066456" duration="66809000" />
     </task>
     <servers />
   </component>

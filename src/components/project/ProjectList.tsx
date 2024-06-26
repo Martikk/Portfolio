@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import DreamDate from '../assets/img/DreamDate.webp';
-import {FlexWrapper} from "./FlexWrapper";
-import Todo from "../assets/img/Todo.webp";
-import Video from "../assets/img/Video.webp";
+import DreamDate from '../../assets/img/DreamDate.webp';
+import {FlexWrapper} from "../FlexWrapper";
+import Todo from "../../assets/img/Todo.webp";
+import Video from "../../assets/img/Video.webp";
 
 const data = [
     {
@@ -32,16 +32,13 @@ const data = [
     },
 ];
 
-const ProjectsList = () => {
+const ProjectList = () => {
     return (
-<FlexWrapper direction={"row"} wrap={"wrap"} justify={"space-between"}>
+<FlexWrapper direction={"row"} wrap={"wrap"} >
 
             {data.map((project, index) => (
                 <ProjectCard
                     key={index}
-                    width="234px"
-                    height="160px"
-                    borderColor="gray"
                     background={project.background}
                     title={project.title}
                     description={project.description}
@@ -54,4 +51,4 @@ const ProjectsList = () => {
     );
 };
 
-export default ProjectsList;
+export default ProjectList;

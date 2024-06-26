@@ -6,7 +6,7 @@ import {ButtonStyled} from "../../../styles/Button .styled";
 import styled from "styled-components";
 import { CgArrowRightR } from "react-icons/cg";
 import {SectionTitle} from "../../../components/SectionTitle";
-import ProjectsList from "../../../components/ProjectsList";
+import ProjectList from "../../../components/project/ProjectList";
 import {RelativeDiv} from "../../../components/RelativeDiv";
 import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 
@@ -25,9 +25,8 @@ const Projects = () => {
                     <ButtonStyled as="a" href="https://github.com/Martikk?tab=repositories" borderColor="none">View all <CgArrowRightR /></ButtonStyled>
                 </FlexWrapper>
             </FlexWrapper>
-
             <RelativeDiv>
-                <ProjectsList />
+                <ProjectList />
                 <AbsoluteDiv right={"0px"} bottom={"100px"}>
                     <Icon iconId={'square'} width="82" height="91" viewBox="0 0 82 91" />
                 </AbsoluteDiv>
