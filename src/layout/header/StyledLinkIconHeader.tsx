@@ -13,7 +13,7 @@ const StyledLinkIconHeader = () => {
             <FlexLink href={"https://www.linkedin.com/in/martishyn"}>
                 <Icon iconId={'linkedin'} width="32" height="32" viewBox="0 0 32 32" />
             </FlexLink>
-            <FlexLink href={"https://github.com/Martikk"}>
+            <FlexLink href={"https://t.me/alexinis"}>
                 <Icon iconId={'telegrram'} width="32" height="32" viewBox="0 0 32 32" />
             </FlexLink>
 

@@ -12,6 +12,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 const Skills = () => {
     return (
         <SkillsSection>
+
             <FlexWrapper direction={"row"}  padding={"106px 100px 0 100px"} alignItems={"center"}>
                 <FlexWrapper>
 

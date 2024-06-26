@@ -112,4 +112,48 @@
     <g id="rectangle23">
         <rect x="0.5" y="0.5" width="51" height="51" stroke="#ABB2BF"/>
     </g>
+    <g id="dotes30">
+        <circle cx="2" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="27" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="52" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="77" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="102" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="19.3334" r="2" fill="#ABB2BF"/>
+        <circle cx="27" cy="19.3334" r="2" fill="#ABB2BF"/>
+        <circle cx="52" cy="19.3334" r="2" fill="#ABB2BF"/>
+        <circle cx="77" cy="19.3334" r="2" fill="#ABB2BF"/>
+        <circle cx="102" cy="19.3334" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="36.6666" r="2" fill="#ABB2BF"/>
+        <circle cx="27" cy="36.6666" r="2" fill="#ABB2BF"/>
+        <circle cx="52" cy="36.6666" r="2" fill="#ABB2BF"/>
+        <circle cx="77" cy="36.6666" r="2" fill="#ABB2BF"/>
+        <circle cx="102" cy="36.6666" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="54" r="2" fill="#ABB2BF"/>
+        <circle cx="27" cy="54" r="2" fill="#ABB2BF"/>
+        <circle cx="52" cy="54" r="2" fill="#ABB2BF"/>
+        <circle cx="77" cy="54" r="2" fill="#ABB2BF"/>
+        <circle cx="102" cy="54" r="2" fill="#ABB2BF"/>
+    </g>
+    <g id="dotes31">
+        <circle cx="2" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="26.75" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="51.5" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="76.25" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="26.75" r="2" fill="#ABB2BF"/>
+        <circle cx="26.75" cy="26.75" r="2" fill="#ABB2BF"/>
+        <circle cx="51.5" cy="26.75" r="2" fill="#ABB2BF"/>
+        <circle cx="76.25" cy="26.75" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="51.5" r="2" fill="#ABB2BF"/>
+        <circle cx="26.75" cy="51.5" r="2" fill="#ABB2BF"/>
+        <circle cx="51.5" cy="51.5" r="2" fill="#ABB2BF"/>
+        <circle cx="76.25" cy="51.5" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="76.25" r="2" fill="#ABB2BF"/>
+        <circle cx="26.75" cy="76.25" r="2" fill="#ABB2BF"/>
+        <circle cx="51.5" cy="76.25" r="2" fill="#ABB2BF"/>
+        <circle cx="76.25" cy="76.25" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="101" r="2" fill="#ABB2BF"/>
+        <circle cx="26.75" cy="101" r="2" fill="#ABB2BF"/>
+        <circle cx="51.5" cy="101" r="2" fill="#ABB2BF"/>
+        <circle cx="76.25" cy="101" r="2" fill="#ABB2BF"/>
+    </g>
 </svg>

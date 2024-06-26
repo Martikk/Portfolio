@@ -5,6 +5,8 @@ type ButtonStyledPropsType = {
     fontSize?: string;
     borderColor?: string;
     padding?: string
+    width?: string
+    height?: string
 };
 
 export const ButtonStyled = styled.button<ButtonStyledPropsType>`
@@ -15,8 +17,8 @@ export const ButtonStyled = styled.button<ButtonStyledPropsType>`
     text-decoration: none;
     padding: ${props => props.padding || "8px 16px"};
     gap: 10px;
-    width: 148px;
-    height: 37px;
+    width: ${props => props.width || "148px"};
+    height: ${props => props.height || "37px"};
     display: flex;
     align-items: center;
     &:hover {

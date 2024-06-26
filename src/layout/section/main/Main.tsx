@@ -8,17 +8,20 @@ import {SpanStyle} from "../../../components/SpanStyle";
 import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 import {RelativeDiv} from "../../../components/RelativeDiv";
 import {FlexLink} from "../../../components/FlexLink";
+import {SectionStyled} from "../../../components/SectionStyled";
 
 const Main = () => {
     return (
-        <MenuMain>
+        <SectionStyled margin={"62px 0 0 0"}>
+            <FlexWrapper alignItems={"center"}>
+
             <FlexWrapper direction={"row"} justify={"space-between"} gap={"10px"}>
-                <FlexWrapper padding={"80px 0 0 122px"} gap={"24px"}>
+                <FlexWrapper gap={"24px"} justify={"center"}>
                     <span>Alex Martishyn is a <h1>front-end developer</h1></span>
-                    <span>He crafts responsive websites where technologies meet creativity</span>
+                    <span>He crafts responsive websites where technologies<br/> meet creativity</span>
                     <ButtonStyled as="a" href="#" borderColor="primary">Contact Me</ButtonStyled>
                 </FlexWrapper>
-                <FlexWrapper padding={"0 171px 0 0"}>
+                <FlexWrapper>
                     <RelativeDiv width={"457px"} height={"386px"} background={`url(${heroimage}) -130.245px -75.697px / 142.25% 210.523% no-repeat`}>
                         <AbsoluteDiv padding={"84px 0 0 0"} index={"-1"}>
                             <Icon iconId={'logohero'} width="156" height="156" viewBox="0 0 156 156" />
@@ -32,7 +35,7 @@ const Main = () => {
                     </FlexWrapper>
                     </FlexWrapper>
             </FlexWrapper>
-
+            </FlexWrapper>
             <FlexWrapper direction={"row"} justify={"flex-end"} padding={"120px 0 0 0"} >
 
                 <FlexWrapper alignItems={"flex-end"} padding={"0 20% 0 0"}>
@@ -49,17 +52,15 @@ const Main = () => {
                         - Dr. Who
                     </SpanStyle>
                 </FlexWrapper>
-                <Icon iconId={'square'} width="82" height="91" viewBox="0 0 82 91" />
+                <AbsoluteDiv width={"25.472px"} height={"20.704px"} bottom={"-100px"} right={"55px"}>
+                    <Icon iconId={'square'} width="82" height="91" viewBox="0 0 82 91" />
+                </AbsoluteDiv>
+
             </FlexWrapper>
-        </MenuMain>
+        </SectionStyled>
     );
 };
 
 export default Main;
-
-const MenuMain = styled.section`
-    margin-top: 62px;
-    padding-left: 42px;
-`
 
 

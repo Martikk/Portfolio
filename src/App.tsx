@@ -2,6 +2,9 @@ import {Header} from "./layout/header/Header"
 import Main from "./layout/section/main/Main";
 import Skills from "./layout/section/skills/Skills";
 import Projects from "./layout/section/projects/Projects";
+import About from "./layout/section/about/About";
+import Contact from "./layout/section/contact/Contact";
+import Footer from "./layout/section/footer/Footer";
 
 function App() {
     return (
@@ -10,6 +13,9 @@ function App() {
             <Main/>
             <Projects/>
             <Skills/>
+            <About/>
+            <Contact/>
+            <Footer/>
         </div>
     );
 }

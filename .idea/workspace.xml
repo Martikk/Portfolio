@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6994b4cb-8c82-4f90-8579-764d2d93afeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/layout/header/StyledLinkIconHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SectionStyled.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/section/about/About.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/section/contact/Contact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/section/footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/SteledLinkIconHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/icon-sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/icon-sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FlexLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FlexLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SectionTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/ProjectDivImg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectDivImg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/StyledLinkIconHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/StyledLinkIconHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/section/projects/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/projects/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/section/skills/Skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/skills/Skills.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Button .styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Button .styled.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/layout/section" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/styles/components" />
       <recent name="$PROJECT_DIR$/src/layout/header" />
-      <recent name="$PROJECT_DIR$/src/components/skills" />
-      <recent name="$PROJECT_DIR$/src/components/project" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -124,7 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718839755356</updated>
       <workItem from="1718839756394" duration="10346000" />
-      <workItem from="1719260066456" duration="68307000" />
+      <workItem from="1719260066456" duration="79383000" />
     </task>
     <servers />
   </component>
@@ -133,17 +143,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/styles/Button .styled.tsx</url>
-          <line>11</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
