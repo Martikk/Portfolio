@@ -13,7 +13,7 @@ type ProjectImgProps = {
 
 export const ProjectImg = styled.img<ProjectImgProps>`
     width: ${props => props.width || '310px'};
-    height: ${props => props.height || '121px'};
+    height: ${props => props.height || '200px'};
     border: 1px solid ${props => props.theme.colors[props.borderColor as keyof typeof props.theme.colors] || props.borderColor || "gray"};
     src: ${props => props.src || ""};
     background-size: ${props => props.backgroundSize || 'cover'};
