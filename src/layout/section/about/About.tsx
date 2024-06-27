@@ -49,7 +49,7 @@ const About = () => {
                                 <Icon iconId={'dotes30'} width="84" height="84" viewBox="0 0 84 84" />
                             </AbsoluteDiv>
 
-                            <AbsoluteDiv right={"-90px"} bottom={"100px"}>`
+                            <AbsoluteDiv right={"-120px"} bottom={"100px"}>`
                                 <Icon iconId={'dotes31'} width="84" height="84" viewBox="0 0 84 84" />
                             </AbsoluteDiv>
                             <AbsoluteDiv right={"35px"} bottom={"-4px"}>

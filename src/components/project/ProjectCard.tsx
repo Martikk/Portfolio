@@ -30,7 +30,7 @@ const ProjectCard = ({
                      }: ProjectCardProps) => {
     return (
         <FlexWrapper padding={"48px 0 0 100px"}>
-            <FlexWrapper width={"250px"} borderColor={"gray"}>
+            <FlexWrapper width={"310px"} borderColor={"gray"}>
                 <ProjectImg
                     src={src}
                     alt={altForImg}

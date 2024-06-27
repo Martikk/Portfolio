@@ -26,13 +26,13 @@ const Contact = () => {
 
     return (
         <SkillsSection>
-            <FlexWrapper alignItems={"flex-start"}>
+            <FlexWrapper>
                 <FlexWrapper direction={"row"} alignItems={"center"} gap={"16px"} padding={"0 0 16px 0 "} >
                     <SectionTitle><SpanStyle spanColor={"primary"}>#</SpanStyle>contacts</SectionTitle>
                     <Icon iconId={'line7'}  width="239" height="2" viewBox="0 0 239 2"  />
                 </FlexWrapper>
 
-                <FlexWrapper width={"515px"} gap={"24px"} justify={"center"} >
+                <FlexWrapper width={"515px"} gap={"24px"} justify={"center"}>
                     <TextP>I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</TextP>
                     <ButtonStyled onClick={handleMessageMeClick} as="a" href="#" borderColor="primary">Messege Me</ButtonStyled>
                     <AbsoluteDiv left={"-30px"}>`

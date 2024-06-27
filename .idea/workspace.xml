@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6994b4cb-8c82-4f90-8579-764d2d93afeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/contactMe/ContactMe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextP.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextP.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/ProjectImg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectImg.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/section/about/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/about/About.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/section/contact/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/contact/Contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/main/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Button .styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Button .styled.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,9 +103,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718839755356</updated>
       <workItem from="1718839756394" duration="10346000" />
-      <workItem from="1719260066456" duration="93065000" />
+      <workItem from="1719260066456" duration="96417000" />
     </task>
     <servers />
   </component>
@@ -137,5 +134,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/layout/section/main/Main.tsx</url>
+          <line>31</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
