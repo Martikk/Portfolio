@@ -13,6 +13,7 @@ type FlexLinkProps = {
     width?: string
     height?: string
     borderColor?: string;
+    color?: string;
 }
 
 
@@ -30,7 +31,7 @@ align-items: ${props => props.alignItems || "stretch"};
     width: ${props => props.width || "auto"};
     height:${props => props.height || "auto"};
     border: 1px solid ${(props)=> props.theme.colors[props.borderColor as keyof typeof props.theme.colors] || props.borderColor ||"none"};
-    
+    color: ${props => props.theme.colors[props.color as keyof typeof props.theme.colors] || props.color || "primary"};
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     :hover {
         transform: scale(1.1);
