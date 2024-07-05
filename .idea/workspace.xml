@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6994b4cb-8c82-4f90-8579-764d2d93afeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/FlexLi.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FlexUl.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/project/ProjectImg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectImg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/ProjectList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project/ProjectList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/section/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/section/footer/Footer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +63,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/layout/section" />
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/layout/section" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/styles/components" />
       <recent name="$PROJECT_DIR$/src/layout/header" />
@@ -121,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718839755356</updated>
       <workItem from="1718839756394" duration="10346000" />
-      <workItem from="1719260066456" duration="99742000" />
+      <workItem from="1719260066456" duration="115239000" />
     </task>
     <servers />
   </component>

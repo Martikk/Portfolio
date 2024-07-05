@@ -6,7 +6,7 @@ import { TextH3 } from "../TextH3";
 import { FaGitSquare } from "react-icons/fa";
 import { SiKdenlive } from "react-icons/si";
 import {ProjectImg} from "./ProjectImg";
-
+import {FlexLi} from "../FlexLi";
 
 
 type ProjectCardProps = {
@@ -29,8 +29,8 @@ const ProjectCard = ({
                          altForImg
                      }: ProjectCardProps) => {
     return (
-        <FlexWrapper padding={"48px 0 0 100px"}>
-            <FlexWrapper width={"310px"} borderColor={"gray"}>
+        <FlexLi padding={"48px 0 0 0px"}>
+            <FlexWrapper width={"310px"} borderColor={"gray"} >
                 <ProjectImg
                     src={src}
                     alt={altForImg}
@@ -47,7 +47,7 @@ const ProjectCard = ({
                     </FlexWrapper>
                 </FlexWrapper>
             </FlexWrapper>
-        </FlexWrapper>
+        </FlexLi>
     );
 };
 

@@ -4,9 +4,6 @@ import Logo from "../../../components/logo/Logo";
 import {FlexLink} from "../../../components/FlexLink";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {TextP} from "../../../components/TextP";
-import {ButtonStyled} from "../../../styles/Button .styled";
-import {PiTelegramLogoLight} from "react-icons/pi";
-import {MdOutlineMailOutline} from "react-icons/md";
 import Icon from "../../../components/icon/Icon";
 import {TextH3} from "../../../components/TextH3";
 
@@ -23,18 +20,28 @@ const Footer = () => {
             </FlexWrapper>
 
 <FlexWrapper padding={"20px 200px 0 0 "} alignItems={"center"} gap={"1rem"}>
+
     <TextH3 color={"white"}>Media</TextH3>
-    <FlexWrapper direction={"row"} gap={"10px"} >
-        <FlexLink href={"https://www.linkedin.com/in/martishyn"}>
-            <Icon iconId={'linkedin'} width="32" height="32" viewBox="0 0 32 32" />
-        </FlexLink>
-        <FlexLink href={"https://t.me/alexinis"}>
-            <Icon iconId={'telegrram'} width="32" height="32" viewBox="0 0 32 32" />
-        </FlexLink>
-        <FlexLink href={"https://github.com/Martikk"}>
-            <Icon iconId={'github'} width="32" height="32" viewBox="0 0 32 32" />
-        </FlexLink>
-    </FlexWrapper>
+
+
+    <StyledFooterUl>
+        <StyledFooterLi>
+            <FlexLink href={"https://www.linkedin.com/in/martishyn"}>
+                <Icon iconId={'linkedin'} width="32" height="32" viewBox="0 0 32 32" />
+            </FlexLink>
+        </StyledFooterLi>
+        <StyledFooterLi>
+            <FlexLink href={"https://t.me/alexinis"}>
+                <Icon iconId={'telegrram'} width="32" height="32" viewBox="0 0 32 32" />
+            </FlexLink>
+        </StyledFooterLi>
+        <StyledFooterLi>
+            <FlexLink href={"https://github.com/Martikk"}>
+                <Icon iconId={'github'} width="32" height="32" viewBox="0 0 32 32" />
+            </FlexLink>
+        </StyledFooterLi>
+    </StyledFooterUl>
+
 </FlexWrapper>
         </StyledFootrDiv>
     <Copyright>© Copyright 2022. Made by Alex Martishyn</Copyright>
@@ -61,4 +68,12 @@ const StyledFootr = styled.footer`
     border-top: 1px solid ${props => props.theme.colors.gray};
     display: flex;
     flex-direction: column;
+`
+
+const StyledFooterUl = styled.ul`
+display: flex;
+    list-style: none;
+    gap: 16px;
+`
+const StyledFooterLi = styled.li`
 `
