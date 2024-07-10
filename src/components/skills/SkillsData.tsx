@@ -41,7 +41,7 @@ const data = [
     },
 ];
 
-const Card = styled.div`
+const Card = styled.li`
     border: 1px solid ${props => props.theme.colors.border || "gray"};
     width: 178px;
 `;

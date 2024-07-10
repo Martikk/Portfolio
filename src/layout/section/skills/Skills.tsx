@@ -7,7 +7,7 @@ import {SpanStyle} from "../../../components/SpanStyle";
 import SkillsData from "../../../components/skills/SkillsData";
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-
+import {FlexUl} from "../../../components/FlexUl";
 
 const Skills = () => {
     return (
@@ -42,9 +42,9 @@ const Skills = () => {
                     </FlexWrapper>
 
                 </FlexWrapper>
-                <FlexWrapper justify={"flex-end"} gap={"10px"} wrap={"wrap"} direction={"row"} alignItems={"flex-start"}>
+                <FlexUl justify={"flex-end"} gap={"10px"} wrap={"wrap"} direction={"row"} alignItems={"flex-start"}>
                     <SkillsData/>
-                </FlexWrapper>
+                </FlexUl>
 
             </FlexWrapper>
         </SkillsSection>
