@@ -4,12 +4,13 @@ import heroimage from '../../../assets/img/hero.webp'
 import Icon from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {ButtonStyled} from "../../../styles/Button .styled";
-import {SpanStyle} from "../../../components/SpanStyle";
 import {AbsoluteDiv} from "../../../components/AbsoluteDiv";
 import {RelativeDiv} from "../../../components/RelativeDiv";
 import {FlexLink} from "../../../components/FlexLink";
 import {SectionStyled} from "../../../components/SectionStyled";
 import {TextP} from "../../../components/TextP";
+import QuoteImage from "../../../assets/img/“.svg"; // Правильный путь к иконке
+
 
 const Main = () => {
     return (
@@ -38,8 +39,12 @@ const Main = () => {
 
                 </FlexWrapper>
 
-
-
+            <FlexWrapper alignItems={"flex-end"} padding={"120px 20% 0 0"}>
+                <QuoteWrapper>
+                    <TextQuote>With great power comes great electricity bill</TextQuote>
+                </QuoteWrapper>
+                <StyleCite>- Dr. Who</StyleCite>
+            </FlexWrapper>
 
         </SectionStyled>
     );
@@ -49,4 +54,50 @@ export default Main;
 
 const TextH1 = styled.h1`
     color: ${props => props.theme.colors.primary};
+`;
+
+const TextQuote = styled.p`
+    color: ${props => props.theme.colors.white};
+`;
+
+const StyleCite= styled.cite`
+    padding: 16px;
+    border: 1px solid ${props => props.theme.colors.gray};
+    margin: 0 0 0 250px;
+    border-top: none;
+    color: white;
+`
+
+const QuoteWrapper = styled.div`
+    position: relative;
+    padding: 32px;
+    gap: 10px;
+    border: 1px solid ${props => props.theme.colors.gray};
+    width: 512px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 26px; 
+        height: 21px; 
+        background-image: url(${QuoteImage});
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &::before {
+        top: -15px;
+        left: 30px;
+    }
+
+    &::after {
+        bottom: -10px;
+        right: 13px;
+    }
 `;
