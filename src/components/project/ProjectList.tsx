@@ -37,7 +37,7 @@ const data = [
 
 const ProjectList = () => {
     return (
-<FlexUl direction={"row"} wrap={"wrap"} gap={"90px"} >
+<FlexUl direction={"row"} wrap={"wrap"} gap={"90px"} padding={"48px 0 0 0px"} >
 
             {data.map((project, index) => (
                 <ProjectCard

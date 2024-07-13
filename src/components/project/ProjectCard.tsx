@@ -29,7 +29,7 @@ const ProjectCard = ({
                          altForImg
                      }: ProjectCardProps) => {
     return (
-        <FlexLi padding={"48px 0 0 0px"}>
+        <FlexLi>
             <FlexWrapper width={"310px"} borderColor={"gray"} >
                 <ProjectImg
                     src={src}
