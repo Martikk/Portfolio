@@ -41,7 +41,7 @@ const Main = () => {
 
             <FlexWrapper alignItems={"flex-end"} padding={"120px 20% 0 0"}>
                 <QuoteWrapper>
-                    <TextQuote>With great power comes great electricity bill</TextQuote>
+                    <TextP color={"white"}>With great power comes great electricity bill</TextP>
                 </QuoteWrapper>
                 <StyleCite>- Dr. Who</StyleCite>
             </FlexWrapper>
@@ -56,16 +56,12 @@ const TextH1 = styled.h1`
     color: ${props => props.theme.colors.primary};
 `;
 
-const TextQuote = styled.p`
-    color: ${props => props.theme.colors.white};
-`;
-
 const StyleCite= styled.cite`
     padding: 16px;
     border: 1px solid ${props => props.theme.colors.gray};
     margin: 0 0 0 250px;
     border-top: none;
-    color: white;
+    color: ${props => props.theme.colors.white};
 `
 
 const QuoteWrapper = styled.div`
