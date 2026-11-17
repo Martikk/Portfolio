@@ -1,166 +1,87 @@
 import React, { useEffect, useRef } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { FiGithub, FiLinkedin, FiSend } from 'react-icons/fi';
-import { hover } from '../styles/Theme.styled';
+import { desktop, hover } from '../styles/Theme.styled';
 
-/* ---------- Layout ---------- */
+/* ---------- Section shell ---------- */
 
-export const Container = styled.div`
-    width: 100%;
-    max-width: 1120px;
-    margin-inline: auto;
-    padding-inline: clamp(16px, 5vw, 40px);
-`;
-
-export const Section = styled.section`
-    padding-block: clamp(64px, 10vw, 112px) 0;
-`;
-
-/* ---------- Typography ---------- */
-
-const TitleRow = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: clamp(24px, 4vw, 48px);
-`;
-
-const Title = styled.h2`
-    font-size: clamp(1.75rem, 4vw, 2rem);
-    font-weight: 500;
-    white-space: nowrap;
-`;
-
-const Rule = styled.span`
-    flex: 0 1 ${(p: { $width?: string }) => p.$width || '240px'};
-    height: 1px;
-    background: ${p => p.theme.colors.primary};
-`;
-
-export const Accent = styled.span`
-    color: ${p => p.theme.colors.primary};
-`;
-
-export const SectionTitle = ({
+/**
+ * On mobile each section gets a sticky label (so you always know where you
+ * are). On desktop the sidebar nav does that job, so the label is visually
+ * hidden but stays for screen readers.
+ */
+export const Section = ({
+    id,
+    label,
     children,
-    ruleWidth,
-    aside,
 }: {
+    id: string;
+    label: string;
     children: React.ReactNode;
-    ruleWidth?: string;
-    aside?: React.ReactNode;
 }) => (
-    <TitleRow>
-        <Title>
-            <Accent>#</Accent>
-            {children}
-        </Title>
-        <Rule $width={ruleWidth} aria-hidden />
-        {aside && <AsideSlot>{aside}</AsideSlot>}
-    </TitleRow>
+    <SectionEl id={id} aria-label={label}>
+        <StickyLabel>{label}</StickyLabel>
+        {children}
+    </SectionEl>
 );
 
-const AsideSlot = styled.div`
-    margin-left: auto;
+const SectionEl = styled.section`
+    scroll-margin-top: 24px;
+    margin-bottom: 96px;
+
+    ${desktop} {
+        scroll-margin-top: 96px;
+        margin-bottom: 144px;
+    }
 `;
 
-/* ---------- Buttons ---------- */
-
-type ButtonVariant = 'primary' | 'ghost';
-
-const buttonStyles = css<{ $variant?: ButtonVariant }>`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 40px;
-    padding: 8px 16px;
-    border: 1px solid ${p => (p.$variant === 'ghost' ? 'transparent' : p.theme.colors.primary)};
-    background: transparent;
-    color: ${p => p.theme.colors.white};
-    font-size: 1rem;
+const StickyLabel = styled.h2`
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 -24px 20px;
+    padding: 16px 24px;
+    background: rgba(11, 13, 18, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: ${p => p.theme.font.mono};
+    font-size: 0.75rem;
     font-weight: 500;
-    text-decoration: none;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    ${desktop} {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+`;
+
+/* ---------- Small pieces ---------- */
+
+export const Tag = styled.li`
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: ${p => p.theme.colors.accentSoft};
+    color: ${p => p.theme.colors.accent};
+    font-family: ${p => p.theme.font.mono};
+    font-size: 0.75rem;
+    line-height: 1.6;
     white-space: nowrap;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition:
-        transform 160ms ${p => p.theme.ease.out},
-        background-color 150ms ease,
-        color 150ms ease;
-
-    svg {
-        flex-shrink: 0;
-        transition: transform 200ms ${p => p.theme.ease.out};
-    }
-
-    ${hover} {
-        &:hover {
-            background-color: ${p =>
-                p.$variant === 'ghost' ? 'rgba(255,255,255,0.04)' : 'rgba(199,120,221,0.14)'};
-        }
-        &:hover svg {
-            transform: translateX(2px);
-        }
-    }
-
-    /* Press feedback: the interface heard you. */
-    &:active {
-        transform: scale(0.97);
-    }
 `;
 
-export const Button = styled.a<{ $variant?: ButtonVariant }>`
-    ${buttonStyles}
+export const TagList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 `;
 
-export const ButtonEl = styled.button<{ $variant?: ButtonVariant }>`
-    ${buttonStyles}
-`;
-
-/* ---------- Decorations (pure CSS, no sprite) ---------- */
-
-export const Dots = styled.span<{ $cols?: number; $rows?: number; $top?: string; $left?: string; $right?: string; $bottom?: string }>`
-    position: absolute;
-    top: ${p => p.$top || 'auto'};
-    left: ${p => p.$left || 'auto'};
-    right: ${p => p.$right || 'auto'};
-    bottom: ${p => p.$bottom || 'auto'};
-    width: ${p => (p.$cols || 5) * 16}px;
-    height: ${p => (p.$rows || 5) * 16}px;
-    background-image: radial-gradient(${p => p.theme.colors.gray} 1.5px, transparent 1.6px);
-    background-size: 16px 16px;
-    opacity: 0.55;
-    pointer-events: none;
-`;
-
-export const Square = styled.span<{ $size?: number; $top?: string; $left?: string; $right?: string; $bottom?: string; $accent?: boolean }>`
-    position: absolute;
-    top: ${p => p.$top || 'auto'};
-    left: ${p => p.$left || 'auto'};
-    right: ${p => p.$right || 'auto'};
-    bottom: ${p => p.$bottom || 'auto'};
-    width: ${p => p.$size || 86}px;
-    height: ${p => p.$size || 86}px;
-    border: 1px solid ${p => (p.$accent ? p.theme.colors.primary : p.theme.colors.gray)};
-    opacity: ${p => (p.$accent ? 0.9 : 0.5)};
-    pointer-events: none;
-`;
-
-export const LogoMark = ({ size = 16 }: { size?: number }) => (
-    <svg width={size} height={size + 1} viewBox="0 0 16 17" fill="none" aria-hidden>
-        <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M12 0.5H8V4.5H4H0V8.5V12.5V16.5H4H8V12.5H12H16V8.5V4.5V0.5H12ZM4 12.5H8V8.5H12V4.5H8V8.5H4V12.5Z"
-            fill="currentColor"
-        />
-    </svg>
-);
-
-export const SocialIcon = ({ icon }: { icon: 'github' | 'linkedin' | 'telegram' }) => {
-    const props = { size: 22, 'aria-hidden': true } as const;
+export const SocialIcon = ({ icon, size = 22 }: { icon: 'github' | 'linkedin' | 'telegram'; size?: number }) => {
+    const props = { size, 'aria-hidden': true } as const;
     if (icon === 'github') return <FiGithub {...props} />;
     if (icon === 'linkedin') return <FiLinkedin {...props} />;
     return <FiSend {...props} />;
@@ -171,24 +92,93 @@ export const IconLink = styled.a`
     place-items: center;
     width: 40px;
     height: 40px;
-    color: ${p => p.theme.colors.gray};
+    color: ${p => p.theme.colors.muted};
     transition:
         color 150ms ease,
         transform 160ms ${p => p.theme.ease.out};
 
     ${hover} {
-        &:hover { color: ${p => p.theme.colors.white}; }
+        &:hover { color: ${p => p.theme.colors.text}; }
     }
-    &:active { transform: scale(0.94); }
+    &:active { transform: scale(0.92); }
+`;
+
+export const TextLink = styled.a`
+    color: ${p => p.theme.colors.text};
+    font-weight: 500;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: color 150ms ease;
+
+    ${hover} {
+        &:hover { color: ${p => p.theme.colors.accent}; }
+    }
+`;
+
+/* ---------- Spotlight ---------- */
+
+/**
+ * A soft glow that trails the cursor. Purely decorative, so it's only on
+ * fine pointers and skipped for reduced motion. We move the layer with
+ * transform (GPU, no layout) instead of updating a CSS variable on a parent,
+ * which would restyle every child on each mousemove.
+ */
+export const Spotlight = () => {
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el || typeof window.matchMedia !== 'function') return;
+        const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!fine || reduce) return;
+
+        let frame = 0;
+        let x = 0;
+        let y = 0;
+        const onMove = (e: PointerEvent) => {
+            x = e.clientX;
+            y = e.clientY;
+            if (frame) return;
+            frame = requestAnimationFrame(() => {
+                frame = 0;
+                el.style.transform = `translate3d(${x - 400}px, ${y - 400}px, 0)`;
+                el.style.opacity = '1';
+            });
+        };
+        const onLeave = () => (el.style.opacity = '0');
+
+        window.addEventListener('pointermove', onMove, { passive: true });
+        document.documentElement.addEventListener('pointerleave', onLeave);
+        return () => {
+            cancelAnimationFrame(frame);
+            window.removeEventListener('pointermove', onMove);
+            document.documentElement.removeEventListener('pointerleave', onLeave);
+        };
+    }, []);
+
+    return <Glow ref={ref} aria-hidden />;
+};
+
+const Glow = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(94, 234, 212, 0.07), transparent 60%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    will-change: transform;
 `;
 
 /* ---------- Scroll reveal ---------- */
 
-/**
- * Fades + rises children into view once. Runs off the main thread (CSS
- * transitions), never blocks interaction, and degrades to "always visible"
- * when IntersectionObserver isn't available.
- */
 export const Reveal = ({
     children,
     delay = 0,
@@ -217,7 +207,7 @@ export const Reveal = ({
                     io.disconnect();
                 }
             },
-            { rootMargin: '0px 0px -80px 0px' }
+            { rootMargin: '0px 0px -60px 0px' }
         );
         io.observe(el);
         return () => io.disconnect();

@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         box-sizing: border-box;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
 
     html {
@@ -19,43 +17,39 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: ${p => p.theme.colors.backgroundDark};
-        color: ${p => p.theme.colors.gray};
-        font-family: ${p => p.theme.font};
+        min-height: 100vh;
+        background: ${p => p.theme.colors.bg};
+        color: ${p => p.theme.colors.muted};
+        font-family: ${p => p.theme.font.sans};
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.65;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
+        font-feature-settings: 'ss01', 'cv11';
     }
 
     h1, h2, h3 {
-        color: ${p => p.theme.colors.white};
-        font-weight: 600;
-        line-height: 1.2;
+        color: ${p => p.theme.colors.text};
+        line-height: 1.15;
+        letter-spacing: -0.02em;
         text-wrap: balance;
     }
 
     p { text-wrap: pretty; }
-
-    a { color: inherit; }
-
+    a { color: inherit; text-decoration: none; }
     img, svg { display: block; max-width: 100%; }
-
-    ul { list-style: none; }
-
-    button, input, textarea { font: inherit; color: inherit; }
-
-    section[id] { scroll-margin-top: 88px; }
+    ul, ol { list-style: none; }
+    button, input { font: inherit; color: inherit; }
 
     ::selection {
-        background: ${p => p.theme.colors.primary};
-        color: ${p => p.theme.colors.backgroundDark};
+        background: ${p => p.theme.colors.accent};
+        color: ${p => p.theme.colors.bg};
     }
 
     :focus-visible {
-        outline: 2px solid ${p => p.theme.colors.primary};
+        outline: 2px solid ${p => p.theme.colors.accent};
         outline-offset: 3px;
+        border-radius: 4px;
     }
 
     .visually-hidden {
@@ -66,16 +60,15 @@ export const GlobalStyles = createGlobalStyle`
         white-space: nowrap;
     }
 
-    /* Scroll reveal: one-time, occasional — gentle rise + fade. */
+    /* One-time scroll reveal: occasional, so it can afford a little elegance. */
     [data-reveal] {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(12px);
         transition:
             opacity 600ms ${p => p.theme.ease.out},
             transform 600ms ${p => p.theme.ease.out};
         transition-delay: var(--reveal-delay, 0ms);
     }
-
     [data-reveal][data-visible='true'] {
         opacity: 1;
         transform: none;

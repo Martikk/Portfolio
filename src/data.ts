@@ -10,16 +10,16 @@ export const socials = [
     { name: 'Telegram', href: 'https://t.me/alexinis', icon: 'telegram' },
 ] as const;
 
-export const navItems = [
-    { name: 'home', href: '#home' },
-    { name: 'works', href: '#works' },
-    { name: 'skills', href: '#skills' },
-    { name: 'about-me', href: '#about-me' },
-    { name: 'contacts', href: '#contacts' },
-];
+export const sections = [
+    { id: 'about', label: 'About' },
+    { id: 'work', label: 'Work' },
+    { id: 'stack', label: 'Stack' },
+    { id: 'contact', label: 'Contact' },
+] as const;
 
 export type Project = {
     title: string;
+    year: string;
     description: string;
     tags: string[];
     live: string;
@@ -31,9 +31,10 @@ export type Project = {
 export const projects: Project[] = [
     {
         title: 'Dreamy Dates',
+        year: '2024',
         description:
-            'Booking platform for curated romantic experiences — browse dates, leave reviews and pay with Stripe.',
-        tags: ['React', 'Redux', 'React Router', 'SCSS', 'Stripe'],
+            'Booking platform for curated romantic experiences. Couples browse date ideas, leave reviews and check out with Stripe; transactional email goes out through SendGrid.',
+        tags: ['React', 'Redux', 'React Router', 'SCSS', 'Stripe', 'SendGrid'],
         live: 'https://dreamydates.ca',
         github: 'https://github.com/Martikk/DreamyDates',
         image: DreamDate,
@@ -41,9 +42,10 @@ export const projects: Project[] = [
     },
     {
         title: 'BrainFlix',
+        year: '2024',
         description:
-            'Video sharing platform: watch, comment on and upload videos, backed by a REST API.',
-        tags: ['React', 'React Router', 'SCSS', 'Vite', 'Axios'],
+            'Video sharing platform: watch videos, read and post comments, and upload new content with drag-and-drop, all backed by a REST API.',
+        tags: ['React', 'React Router', 'Vite', 'SCSS', 'Axios'],
         live: 'https://master.d3hz3i03c78cd3.amplifyapp.com/',
         github: 'https://github.com/Martikk/BrainFlix',
         image: Video,
@@ -51,8 +53,9 @@ export const projects: Project[] = [
     },
     {
         title: 'To-Do List',
+        year: '2024',
         description:
-            'Task manager with categories, priorities, due dates and filtering, deployed on AWS Amplify.',
+            'Task manager with categories, priorities, due dates and filtering. Frontend talks to its own API and is deployed on AWS Amplify.',
         tags: ['React', 'Axios', 'CSS', 'AWS Amplify'],
         live: 'https://main.d3sufhpecf7yrr.amplifyapp.com/',
         github: 'https://github.com/Martikk/todo-frontend',
@@ -61,11 +64,9 @@ export const projects: Project[] = [
     },
 ];
 
-export const skills = [
-    { title: 'Languages', items: ['TypeScript', 'JavaScript', 'Python', 'Lua'] },
-    { title: 'Frontend', items: ['React', 'Redux', 'Vue', 'HTML', 'CSS', 'SCSS'] },
-    { title: 'Backend', items: ['Node.js', 'Express', 'Flask', 'REST', 'EJS', 'Jinja'] },
-    { title: 'Databases', items: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite'] },
-    { title: 'Tools', items: ['Git', 'AWS', 'Linux', 'Figma', 'VS Code', 'Neovim'] },
-    { title: 'Other', items: ['Discord.js', 'Disnake', 'Photoshop'] },
+export const stack = [
+    { title: 'Frontend', items: ['React', 'TypeScript', 'JavaScript', 'Redux', 'Vue', 'HTML', 'CSS', 'SCSS'] },
+    { title: 'Backend', items: ['Node.js', 'Express', 'REST', 'Python', 'Flask', 'EJS', 'Jinja'] },
+    { title: 'Data', items: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite'] },
+    { title: 'Tooling', items: ['Git', 'AWS', 'Linux', 'Vite', 'Figma', 'Photoshop', 'Neovim'] },
 ];

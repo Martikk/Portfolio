@@ -1,41 +1,71 @@
-import React from 'react';
-import { Header } from './sections/Header';
-import { SocialRail } from './sections/SocialRail';
-import { Hero } from './sections/Hero';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Spotlight } from './components/ui';
+import { CommandMenu } from './components/CommandMenu';
+import { Sidebar } from './sections/Sidebar';
+import { About } from './sections/About';
 import { Projects } from './sections/Projects';
 import { Skills } from './sections/Skills';
-import { About } from './sections/About';
 import { Contact } from './sections/Contact';
-import { Footer } from './sections/Footer';
+import { desktop } from './styles/Theme.styled';
 
 function App() {
+    const [commandOpen, setCommandOpen] = useState(false);
+
     return (
         <>
-            <SkipLink href="#works">Skip to projects</SkipLink>
-            <Header />
-            <SocialRail />
-            <main>
-                <Hero />
-                <Projects />
-                <Skills />
-                <About />
-                <Contact />
-            </main>
-            <Footer />
+            <Spotlight />
+            <SkipLink href="#work">Skip to work</SkipLink>
+            <Shell>
+                <Sidebar onOpenCommand={() => setCommandOpen(true)} />
+                <Main>
+                    <About />
+                    <Projects />
+                    <Skills />
+                    <Contact />
+                </Main>
+            </Shell>
+            <CommandMenu open={commandOpen} setOpen={setCommandOpen} />
         </>
     );
 }
 
-const SkipLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-    <a
-        href={href}
-        className="visually-hidden"
-        onFocus={e => e.currentTarget.classList.remove('visually-hidden')}
-        onBlur={e => e.currentTarget.classList.add('visually-hidden')}
-        style={{ position: 'fixed', top: 8, left: 8, zIndex: 100, padding: '8px 12px', background: '#C778DD', color: '#282C33' }}
-    >
-        {children}
-    </a>
-);
+const Shell = styled.div`
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+
+    ${desktop} {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 64px;
+        padding-inline: 48px;
+    }
+`;
+
+const Main = styled.main`
+    padding-bottom: 48px;
+
+    ${desktop} {
+        padding-block: 96px;
+    }
+`;
+
+const SkipLink = styled.a`
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 100;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: ${p => p.theme.colors.accent};
+    color: ${p => p.theme.colors.bg};
+    font-weight: 500;
+    transform: translateY(-150%);
+
+    &:focus-visible { transform: none; }
+`;
 
 export default App;
