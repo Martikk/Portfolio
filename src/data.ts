@@ -3,7 +3,7 @@ import Video from './assets/img/Video.webp';
 import InStock from './assets/img/InStock.webp';
 
 export const EMAIL = 'alex@martishyn.ca';
-export const RESUME = `${process.env.PUBLIC_URL}/Alex-Martishyn-Resume.pdf`;
+export const RESUME = `${process.env.PUBLIC_URL}/Alex-Martishyn-Technical-Project-Manager.pdf`;
 
 export const socials = [
     { name: 'GitHub', href: 'https://github.com/Martikk', icon: 'github' },

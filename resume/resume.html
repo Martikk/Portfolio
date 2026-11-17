@@ -2,125 +2,162 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Alex Martishyn — Résumé</title>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<title>Alex Martishyn — Technical Project Manager</title>
+<meta name="author" content="Alex Martishyn">
+<meta name="description" content="Résumé of Alex Martishyn, Technical Project Manager — construction delivery and full-stack development.">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=block" rel="stylesheet">
 <style>
-  @page { size: Letter; margin: 0.42in 0.5in; }
+  /*
+    ATS-safe by design: one column, real text (no icons, tables or text boxes),
+    standard section names, one date format, contact info in the body (not a
+    page header), and only light letter-spacing so headings extract as words.
+  */
+  @page { size: Letter; margin: 0.45in 0.58in 0.4in; }
+  :root { --ink: #16181d; --body: #2a2e37; --muted: #5d6472; --accent: #0f5f58; --rule: #d7dbe1; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: "Geist", system-ui, sans-serif; color: #1b1e25; font-size: 9.1pt; line-height: 1.36; }
+  body {
+    font-family: "Geist", Arial, sans-serif;
+    font-size: 9.2pt;
+    line-height: 1.28;
+    color: var(--body);
+    font-variant-ligatures: none;
+    -webkit-font-smoothing: antialiased;
+  }
   a { color: inherit; text-decoration: none; }
-  header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 10pt; border-bottom: 1.5pt solid #0f766e; }
-  h1 { font-size: 22pt; letter-spacing: -0.03em; line-height: 1; }
-  .role { margin-top: 5pt; font-size: 11pt; font-weight: 500; color: #0f766e; }
-  .contact { text-align: right; font-family: "Geist Mono", monospace; font-size: 8.2pt; line-height: 1.6; color: #444b59; }
-  h2 { margin: 10pt 0 5pt; font-family: "Geist Mono", monospace; font-size: 8pt; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #0f766e; }
-  .summary { color: #2b303b; }
-  .job { display: grid; grid-template-columns: 78pt 1fr; gap: 10pt; margin-bottom: 6pt; break-inside: avoid; }
-  .when { font-family: "Geist Mono", monospace; font-size: 8pt; color: #5b6275; padding-top: 1pt; }
-  .what h3 { font-size: 10pt; font-weight: 600; }
-  .what h3 span { font-weight: 400; color: #444b59; }
-  .what ul { margin: 3pt 0 0 11pt; }
-  .what li { margin-bottom: 1.5pt; }
+
+  .top { padding-bottom: 9pt; border-bottom: 2pt solid var(--accent); }
+  h1 { font-size: 23pt; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; color: var(--ink); }
+  .headline { margin-top: 4pt; font-size: 11pt; font-weight: 600; color: var(--accent); }
+  .contact { margin-top: 5pt; font-size: 8.6pt; color: var(--muted); }
+  .contact span + span::before { content: "  |  "; color: var(--rule); white-space: pre; }
+
+  h2 {
+    margin: 9pt 0 4.5pt;
+    padding-bottom: 2.5pt;
+    border-bottom: 0.75pt solid var(--rule);
+    font-size: 10.5pt;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--accent);
+  }
+
+  .summary { color: var(--body); }
+
+  .job { margin-bottom: 6pt; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .job-head h3 { font-size: 10pt; font-weight: 700; color: var(--ink); }
+  .job-head h3 span { font-weight: 400; color: var(--body); }
+  .date { flex-shrink: 0; font-size: 8.8pt; font-weight: 500; color: var(--muted); white-space: nowrap; }
+
+  ul { margin: 2.5pt 0 0 10pt; }
+  li { margin-bottom: 1.5pt; padding-left: 2pt; }
+  li::marker { color: var(--accent); }
+  b { font-weight: 600; color: var(--ink); }
+
   .proj { margin-bottom: 4pt; break-inside: avoid; }
-  .proj h3 { font-size: 10pt; font-weight: 600; }
-  .proj h3 span { font-family: "Geist Mono", monospace; font-weight: 400; font-size: 8pt; color: #5b6275; }
-  .skills { display: grid; grid-template-columns: 96pt 1fr; row-gap: 3pt; }
-  .skills b { font-weight: 600; }
-  .cols { display: grid; grid-template-columns: 1fr; }
+  .proj .job-head h3 span { color: var(--muted); font-size: 8.8pt; }
+  .proj p { margin-top: 1pt; }
+
+  .skills p { margin-bottom: 2.5pt; }
+  .skills b { color: var(--accent); }
 </style>
 </head>
 <body>
-  <header>
-    <div>
-      <h1>Alex Martishyn</h1>
-      <div class="role">Project manager who builds software</div>
-    </div>
-    <div class="contact">
-      Vancouver, BC<br>
-      <a href="mailto:alex@martishyn.ca">alex@martishyn.ca</a><br>
-      <a href="https://martikk.github.io/Portfolio/">martikk.github.io/Portfolio</a><br>
-      <a href="https://www.linkedin.com/in/martishyn/">linkedin.com/in/martishyn</a> · <a href="https://github.com/Martikk">github.com/Martikk</a>
-    </div>
-  </header>
+  <div class="top">
+    <h1>Alex Martishyn</h1>
+    <p class="headline">Technical Project Manager · Construction Delivery + Full-Stack Development</p>
+    <p class="contact">
+      <span>Vancouver, BC</span><span><a href="mailto:alex@martishyn.ca">alex@martishyn.ca</a></span><span><a href="https://www.linkedin.com/in/martishyn/">linkedin.com/in/martishyn</a></span><span><a href="https://github.com/Martikk">github.com/Martikk</a></span><span><a href="https://martikk.github.io/Portfolio/">martikk.github.io/Portfolio</a></span>
+    </p>
+  </div>
 
   <h2>Summary</h2>
   <p class="summary">
-    Project manager with ten years delivering projects — web and mobile at two development agencies, then institutional
-    mechanical construction — and eight years as a plumber before that. Since 2024 I build full-stack web apps with
-    React, TypeScript and Node.js, working daily with AI coding tools. Looking for construction-tech, technical
-    project management and implementation roles where delivery experience and hands-on software skills both count.
+    Technical project manager with 10 years of delivery: 6 years running web and mobile projects at development
+    agencies (40+ shipped), then 4 years managing ICI mechanical construction for public-sector owners. Eight years as a
+    plumber before that, so I am the field user construction software is built for, and I can talk to the engineers
+    who build it. Since 2024 I build full-stack apps in React, TypeScript and Node.js. Targeting technical project
+    management, implementation and solutions roles in construction tech.
   </p>
 
   <h2>Experience</h2>
+
   <div class="job">
-    <div class="when">Nov 2024 — Now</div>
-    <div class="what">
-      <h3>Project Manager, Mechanical (HVAC &amp; Plumbing) <span>· Allied Plumbing, Heating &amp; Air Conditioning, Vancouver</span></h3>
-      <ul>
-        <li>Run ICI mechanical projects from estimate to closeout for school districts (SD 40, SD 43), Capilano University, Collingwood School and public-sector owners, often in occupied buildings.</li>
-        <li>Boiler plant, air-source heat pump and pneumatic-to-DDC controls upgrades; annual maintenance program for 7 campus boilers.</li>
-        <li>Estimates and public tenders (BC Bid, Bonfire); subtrade award; RFIs, submittals and shop drawings; change-order pricing; budget, billing and O&amp;M turnover.</li>
-      </ul>
+    <div class="job-head">
+      <h3>Project Manager, Mechanical (HVAC &amp; Plumbing) <span>· Allied Plumbing, Heating &amp; Air Conditioning, Vancouver, BC</span></h3>
+      <span class="date">Nov 2024 – Present</span>
     </div>
-  </div>
-  <div class="job">
-    <div class="when">Aug 2022 — Nov 2024</div>
-    <div class="what">
-      <h3>Construction Project Manager <span>· Lionhead Mechanical, Vancouver</span></h3>
-      <ul>
-        <li>Plumbing and mechanical projects from preconstruction to closeout; coordinated subtrades, suppliers, consultants and inspectors.</li>
-        <li>Scheduled with lean pull planning (Last Planner System®) and tracked required-on-job dates against milestones.</li>
-        <li>Set up a centralized document system for drawings and project files.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="job">
-    <div class="when">Aug 2019 — Aug 2022</div>
-    <div class="what">
-      <h3>Project Manager <span>· Fourmeta Agency, Vancouver</span></h3>
-      <ul>
-        <li>Led client web projects for a digital agency; built project tracking and reporting shared by clients and the internal team.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="job">
-    <div class="when">Jul 2016 — Aug 2019</div>
-    <div class="what">
-      <h3>Project Manager <span>· ANODA web &amp; mobile development agency, New York (remote)</span></h3>
-      <ul>
-        <li>Delivered 40+ web and mobile projects end to end, including work with 17 early-stage startups; ran scope, estimates and timelines with design and engineering teams.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="job">
-    <div class="when">Mar 2008 — Jul 2016</div>
-    <div class="what">
-      <h3>Plumber <span>· Bioprom, Kharkiv, Ukraine</span></h3>
-      <ul>
-        <li>Residential and commercial installation, service and repair; coordinated with GCs, PMs, inspectors and other trades.</li>
-      </ul>
-    </div>
+    <ul>
+      <li>Manage ICI mechanical projects from estimate to closeout, as prime contractor or mechanical subcontractor, for <b>SD 40, SD 43, Capilano University, Collingwood School, VPD and ICBC</b>; report to ownership on schedule and budget.</li>
+      <li>Deliver boiler plant, air-source heat pump and pneumatic-to-DDC controls upgrades in occupied buildings, including an after-hours heating plant replacement at Nestor Elementary and a boiler and DDC conversion at Capilano’s Alder Building.</li>
+      <li>Win and run work through public tenders (BC Bid, Bonfire): estimating, subtrade award, RFIs, submittals, shop drawings, change-order pricing, progress billing and O&amp;M turnover.</li>
+      <li>Coordinate self-perform crews with electrical and controls subtrades, consultants, inspectors and owners’ facilities teams; run an annual maintenance program for 7 campus boilers.</li>
+    </ul>
   </div>
 
-  <h2>Software projects</h2>
+  <div class="job">
+    <div class="job-head">
+      <h3>Construction Project Manager (part-time) <span>· Lionhead Mechanical, Vancouver, BC</span></h3>
+      <span class="date">Aug 2022 – Nov 2024</span>
+    </div>
+    <ul>
+      <li>Managed plumbing and mechanical projects from preconstruction to closeout: tendering, scope development, subtrade award, and change-order pricing and documentation.</li>
+      <li>Scheduled with Last Planner System pull planning and tracked required-on-job dates against milestones.</li>
+      <li>Set up a centralized document system for drawings and project files; ran on-site quality and safety inspections.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <h3>Project Manager (part-time, hybrid) <span>· Fourmeta, Vancouver, BC</span></h3>
+      <span class="date">Aug 2019 – Aug 2022</span>
+    </div>
+    <ul>
+      <li>Led client web projects for a digital agency using Agile delivery; built project tracking and reporting shared by clients and the internal team.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <h3>Project Manager (remote contract) <span>· ANODA, web and mobile development agency, New York, NY</span></h3>
+      <span class="date">Jul 2016 – Aug 2019</span>
+    </div>
+    <ul>
+      <li>Delivered <b>40+ web and mobile projects</b> end to end, including 17 for early-stage startups; owned scope, estimates and timelines with design and engineering teams.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <h3>Plumber <span>· Bioprom, Kharkiv, Ukraine</span></h3>
+      <span class="date">Mar 2008 – Jul 2016</span>
+    </div>
+    <ul>
+      <li>Residential and commercial installation, service and repair; coordinated with general contractors, PMs, inspectors and other trades.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
   <div class="proj">
-    <h3>Dreamy Dates <span>· dreamydates.ca · React, Redux, Node.js, Express, Stripe, SendGrid</span></h3>
-    <p>Booking platform for curated date experiences with its own API, Stripe payments and transactional email.</p>
+    <div class="job-head">
+      <h3>Dreamy Dates <span>· React, Redux, Node.js, Express, Stripe, SendGrid</span></h3>
+      <span class="date"><a href="https://dreamydates.ca">dreamydates.ca</a></span>
+    </div>
+    <p>Live booking platform for date experiences with its own REST API, Stripe payments and transactional email.</p>
   </div>
   <div class="proj">
-    <h3>InStock <span>· React, Node.js, Express, MySQL, Knex</span></h3>
+    <div class="job-head">
+      <h3>InStock <span>· React, Node.js, Express, MySQL, Knex</span></h3>
+      <span class="date"><a href="https://github.com/Martikk/warehouse-backend">github.com/Martikk/warehouse-backend</a></span>
+    </div>
     <p>Warehouse and inventory management app: REST API with migrations, seed data, validation, search and sorting.</p>
-  </div>
-  <div class="proj">
-    <h3>BrainFlix <span>· React, Vite, SCSS, Express</span></h3>
-    <p>Video sharing app with uploads and comments, backed by a separate Express API.</p>
   </div>
 
   <h2>Skills</h2>
   <div class="skills">
-    <b>Software</b><span>React, Next.js, TypeScript, JavaScript, Node.js, Express, REST APIs, MySQL, Knex, Tailwind CSS, SCSS, Git</span>
-    <b>AI &amp; tooling</b><span>Claude Code, Vercel, AWS Amplify, Figma</span>
-    <b>Project delivery</b><span>Estimating, public tenders, scheduling (Last Planner), RFIs &amp; submittals, change orders, closeout &amp; O&amp;M, Agile</span>
+    <p><b>Construction delivery:</b> Estimating, public tenders, Last Planner scheduling, RFIs, submittals, shop drawings, change orders, closeout and O&amp;M, HVAC and DDC controls, subcontractor coordination</p>
+    <p><b>Software:</b> TypeScript, JavaScript, React, Next.js, Node.js, Express, REST APIs, SQL (MySQL), Knex, Tailwind CSS, Git</p>
+    <p><b>Tools and methods:</b> Claude Code, Vercel, AWS Amplify, Figma, Agile project management, stakeholder management</p>
   </div>
 </body>
 </html>

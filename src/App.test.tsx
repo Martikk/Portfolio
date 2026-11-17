@@ -59,5 +59,5 @@ test('résumé links point at the PDF', () => {
     renderApp();
     const links = screen.getAllByRole('link', { name: /résumé/i });
     expect(links.length).toBeGreaterThanOrEqual(2);
-    links.forEach(a => expect(a.getAttribute('href')).toMatch(/Alex-Martishyn-Resume\.pdf$/));
+    links.forEach(a => expect(a.getAttribute('href')).toMatch(/Alex-Martishyn-Technical-Project-Manager\.pdf$/));
 });
