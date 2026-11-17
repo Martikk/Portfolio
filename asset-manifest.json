@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/Portfolio/static/js/main.9913fa64.js",
+    "main.js": "/Portfolio/static/js/main.5b4dfe7f.js",
     "static/media/AlliedSite.webp": "/Portfolio/static/media/AlliedSite.2c923269d27989785f50.webp",
     "static/media/NCCG.webp": "/Portfolio/static/media/NCCG.881cf81869dcc9d39241.webp",
     "static/media/Plenum.webp": "/Portfolio/static/media/Plenum.03a7238581ea61ae9943.webp",
     "static/media/Held.webp": "/Portfolio/static/media/Held.820727c0949702f3d8f3.webp",
     "index.html": "/Portfolio/index.html",
-    "main.9913fa64.js.map": "/Portfolio/static/js/main.9913fa64.js.map"
+    "main.5b4dfe7f.js.map": "/Portfolio/static/js/main.5b4dfe7f.js.map"
   },
   "entrypoints": [
-    "static/js/main.9913fa64.js"
+    "static/js/main.5b4dfe7f.js"
   ]
 }
