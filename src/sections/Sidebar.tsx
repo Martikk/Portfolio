@@ -54,8 +54,8 @@ export const Sidebar = ({ onOpenCommand }: { onOpenCommand: () => void }) => {
                 </Name>
                 <Role>Project manager who builds software</Role>
                 <Lede>
-                    Ten years running web and construction projects. Now I also build the tools — with React,
-                    Node.js and AI.
+                    Mechanical PM and estimator by day. I also ship production software for contractors — with
+                    React, Next.js and AI.
                 </Lede>
 
                 <Resume href={RESUME} target="_blank" rel="noreferrer">

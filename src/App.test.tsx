@@ -20,10 +20,10 @@ test('renders name and role', () => {
 test('every project links to a live site and its source', () => {
     const { container } = renderApp();
     const work = within(container.querySelector('#work') as HTMLElement);
-    const live = work.getAllByRole('link', { name: /\(opens (live site|video demo)\)/i });
+    const live = work.getAllByRole('link', { name: /\(opens live (site|demo|app)\)/i });
     const source = work.getAllByRole('link', { name: /^source$/i });
-    expect(live).toHaveLength(3);
-    expect(source).toHaveLength(3);
+    expect(live).toHaveLength(4);
+    expect(source).toHaveLength(3); // Held's repository is private
     [...live, ...source].forEach(a => expect(a.getAttribute('href')).toMatch(/^https:\/\//));
 });
 
@@ -49,7 +49,7 @@ test('copy button copies the email and confirms', async () => {
 test('experience lists every role, newest first', () => {
     const { container } = renderApp();
     const exp = within(container.querySelector('#experience') as HTMLElement);
-    const headings = exp.getAllByRole('heading', { level: 3 }).map(h => h.textContent);
+    const headings = exp.getAllByRole('heading', { level: 3 }).map(h => h.textContent).filter(t => !/education/i.test(t || ''));
     expect(headings).toHaveLength(5);
     expect(headings[0]).toMatch(/Allied Plumbing/);
     expect(headings[4]).toMatch(/Plumber/);

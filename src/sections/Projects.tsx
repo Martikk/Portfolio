@@ -15,7 +15,9 @@ export const Projects = () => (
                             <img src={p.image} alt={p.alt} loading="lazy" decoding="async" />
                         </Thumb>
                         <Body>
-                            <Year>{p.year}</Year>
+                            <Year>
+                                {p.year} · {p.kind}
+                            </Year>
                             <h3>
                                 {/* The title link stretches over the whole card (see ::after). */}
                                 <CardLink href={p.live} target="_blank" rel="noreferrer">
@@ -30,9 +32,13 @@ export const Projects = () => (
                                     <Tag key={t}>{t}</Tag>
                                 ))}
                             </TagList>
-                            <Source href={p.github} target="_blank" rel="noreferrer">
-                                <FiGithub aria-hidden /> Source
-                            </Source>
+                            {p.github ? (
+                                <Source href={p.github} target="_blank" rel="noreferrer">
+                                    <FiGithub aria-hidden /> Source
+                                </Source>
+                            ) : (
+                                <Private>Private repository</Private>
+                            )}
                         </Body>
                     </Card>
                 </Reveal>
@@ -40,7 +46,7 @@ export const Projects = () => (
         </List>
 
         <Archive href="https://github.com/Martikk?tab=repositories" target="_blank" rel="noreferrer">
-            All repositories on GitHub <FiArrowUpRight aria-hidden />
+            Earlier work and all repositories on GitHub <FiArrowUpRight aria-hidden />
         </Archive>
     </Section>
 );
@@ -166,6 +172,12 @@ const Source = styled.a`
     ${hover} {
         &:hover { color: ${p => p.theme.colors.text}; }
     }
+`;
+
+const Private = styled.span`
+    margin-top: 2px;
+    color: ${p => p.theme.colors.faint};
+    font-size: 0.875rem;
 `;
 
 const Archive = styled.a`

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FiArrowUpRight, FiFileText } from 'react-icons/fi';
 import { Reveal, Section, Tag, TagList } from '../components/ui';
-import { experience, RESUME } from '../data';
+import { education, experience, RESUME } from '../data';
 import { hover } from '../styles/Theme.styled';
 
 export const Experience = () => (
@@ -29,6 +29,21 @@ export const Experience = () => (
                 </Reveal>
             ))}
         </List>
+
+        <Reveal>
+            <EduTitle>Education &amp; certifications</EduTitle>
+            <Edu>
+                {education.map(e => (
+                    <li key={e.title}>
+                        <span>{e.year}</span>
+                        <div>
+                            <b>{e.title}</b>
+                            <em>{e.org}</em>
+                        </div>
+                    </li>
+                ))}
+            </Edu>
+        </Reveal>
 
         <ResumeLink href={RESUME} target="_blank" rel="noreferrer">
             <FiFileText aria-hidden /> View full résumé <FiArrowUpRight aria-hidden />
@@ -82,6 +97,50 @@ const Place = styled.span`
     margin-top: 2px;
     color: ${p => p.theme.colors.faint};
     font-size: 0.8125rem;
+`;
+
+const EduTitle = styled.h3`
+    margin: 56px 0 16px;
+    color: ${p => p.theme.colors.faint};
+    font-family: ${p => p.theme.font.mono};
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+`;
+
+const Edu = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+        display: grid;
+        gap: 2px;
+        @media (min-width: 560px) {
+            grid-template-columns: 120px 1fr;
+            gap: 24px;
+        }
+    }
+
+    span {
+        color: ${p => p.theme.colors.faint};
+        font-family: ${p => p.theme.font.mono};
+        font-size: 0.75rem;
+        padding-top: 3px;
+    }
+
+    b {
+        display: block;
+        color: ${p => p.theme.colors.text};
+        font-size: 0.9375rem;
+        font-weight: 500;
+    }
+
+    em {
+        font-style: normal;
+        font-size: 0.875rem;
+    }
 `;
 
 const ResumeLink = styled.a`

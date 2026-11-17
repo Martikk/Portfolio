@@ -12,13 +12,13 @@
     standard section names, one date format, contact info in the body (not a
     page header), and only light letter-spacing so headings extract as words.
   */
-  @page { size: Letter; margin: 0.45in 0.58in 0.4in; }
+  @page { size: Letter; margin: 0.42in 0.56in 0.32in; }
   :root { --ink: #16181d; --body: #2a2e37; --muted: #5d6472; --accent: #0f5f58; --rule: #d7dbe1; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: "Geist", Arial, sans-serif;
     font-size: 9.2pt;
-    line-height: 1.28;
+    line-height: 1.25;
     color: var(--body);
     font-variant-ligatures: none;
     -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@
   .contact span + span::before { content: "  |  "; color: var(--rule); white-space: pre; }
 
   h2 {
-    margin: 9pt 0 4.5pt;
+    margin: 7.5pt 0 4pt;
     padding-bottom: 2.5pt;
     border-bottom: 0.75pt solid var(--rule);
     font-size: 10.5pt;
@@ -43,7 +43,7 @@
 
   .summary { color: var(--body); }
 
-  .job { margin-bottom: 6pt; break-inside: avoid; }
+  .job { margin-bottom: 5pt; break-inside: avoid; }
   .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
   .job-head h3 { font-size: 10pt; font-weight: 700; color: var(--ink); }
   .job-head h3 span { font-weight: 400; color: var(--body); }
@@ -73,57 +73,56 @@
 
   <h2>Summary</h2>
   <p class="summary">
-    Technical project manager with 10 years of delivery: 6 years running web and mobile projects at development
-    agencies (40+ shipped), then 4 years managing ICI mechanical construction for public-sector owners. Eight years as a
-    plumber before that, so I am the field user construction software is built for, and I can talk to the engineers
-    who build it. Since 2024 I build full-stack apps in React, TypeScript and Node.js. Targeting technical project
-    management, implementation and solutions roles in construction tech.
+    Mechanical project manager and estimator with 10 years of delivery: 4 in ICI construction (8 current
+    projects, about $3.3M) and 6 at web and mobile agencies (40+ projects shipped), after 8 years as a plumber. I
+    also ship production software for contractors. Targeting technical PM, implementation and solutions roles in
+    construction tech.
   </p>
 
   <h2>Experience</h2>
 
   <div class="job">
     <div class="job-head">
-      <h3>Project Manager, Mechanical (HVAC &amp; Plumbing) <span>· Allied Plumbing, Heating &amp; Air Conditioning, Vancouver, BC</span></h3>
+      <h3>Project Manager &amp; Estimator, Mechanical <span>· Allied Plumbing, Heating &amp; Air Conditioning, Burnaby, BC</span></h3>
       <span class="date">Nov 2024 – Present</span>
     </div>
     <ul>
-      <li>Manage ICI mechanical projects from estimate to closeout, as prime contractor or mechanical subcontractor, for <b>SD 40, SD 43, Capilano University, Collingwood School, VPD and ICBC</b>; report to ownership on schedule and budget.</li>
-      <li>Deliver boiler plant, air-source heat pump and pneumatic-to-DDC controls upgrades in occupied buildings, including an after-hours heating plant replacement at Nestor Elementary and a boiler and DDC conversion at Capilano’s Alder Building.</li>
-      <li>Win and run work through public tenders (BC Bid, Bonfire): estimating, subtrade award, RFIs, submittals, shop drawings, change-order pricing, progress billing and O&amp;M turnover.</li>
-      <li>Coordinate self-perform crews with electrical and controls subtrades, consultants, inspectors and owners’ facilities teams; run an annual maintenance program for 7 campus boilers.</li>
+      <li>Estimate and manage <b>8 institutional HVAC retrofits (about $3.3M combined, $150K–$750K each)</b> for SD 40, SD 43, SD 48, Capilano University, Collingwood School and ICBC: boiler plants, chillers, air-source heat pump conversions and DDC controls, mostly in occupied buildings.</li>
+      <li>Win work through public tenders (BC Bid, Bonfire); build budgets, lead procurement (RFQs, supplier and subtrade pricing, lead times) and negotiate change orders.</li>
+      <li>Coordinate engineers, architects and controls, electrical, seismic and structural subtrades; manage RFIs, submittals, crane lifts and shutdowns, including a boiler plant delivered within a summer shutdown.</li>
+      <li>Track projects in Procore and Microsoft Project; close out with O&amp;M manuals, as-builts and commissioning records; mentor junior coordinators.</li>
+      <li>Built and maintain the company’s production website, <b>alliedplumbing.ca</b> (React, TypeScript, 42 prerendered pages, lead-capture forms).</li>
     </ul>
   </div>
 
   <div class="job">
     <div class="job-head">
-      <h3>Construction Project Manager (part-time) <span>· Lionhead Mechanical, Vancouver, BC</span></h3>
+      <h3>Project Manager <span>· Lionhead Mechanical, Vancouver, BC</span></h3>
       <span class="date">Aug 2022 – Nov 2024</span>
     </div>
     <ul>
-      <li>Managed plumbing and mechanical projects from preconstruction to closeout: tendering, scope development, subtrade award, and change-order pricing and documentation.</li>
-      <li>Scheduled with Last Planner System pull planning and tracked required-on-job dates against milestones.</li>
-      <li>Set up a centralized document system for drawings and project files; ran on-site quality and safety inspections.</li>
+      <li>Managed concurrent plumbing and HVAC projects from tender award to completion (institutional, residential, tenant improvement); prepared takeoffs, scope sheets and bids for projects up to $1.2M.</li>
+      <li>Scheduled with Last Planner pull planning; reviewed RFIs, submittals and shop drawings; ran WorkSafeBC safety and quality inspections.</li>
     </ul>
   </div>
 
   <div class="job">
     <div class="job-head">
-      <h3>Project Manager (part-time, hybrid) <span>· Fourmeta, Vancouver, BC</span></h3>
+      <h3>Project Manager <span>· Fourmeta, London, UK (remote)</span></h3>
       <span class="date">Aug 2019 – Aug 2022</span>
     </div>
     <ul>
-      <li>Led client web projects for a digital agency using Agile delivery; built project tracking and reporting shared by clients and the internal team.</li>
+      <li>Ran B2B growth and client delivery: discovery, requirements, proposals and scoping, CRM pipeline, hand-off to delivery.</li>
     </ul>
   </div>
 
   <div class="job">
     <div class="job-head">
-      <h3>Project Manager (remote contract) <span>· ANODA, web and mobile development agency, New York, NY</span></h3>
+      <h3>Project Manager <span>· ANODA, web and mobile development agency, New York (remote)</span></h3>
       <span class="date">Jul 2016 – Aug 2019</span>
     </div>
     <ul>
-      <li>Delivered <b>40+ web and mobile projects</b> end to end, including 17 for early-stage startups; owned scope, estimates and timelines with design and engineering teams.</li>
+      <li>Delivered <b>40+ web and mobile projects</b> end to end, including 17 for early-stage startups; led cross-functional teams on scope, budget and timelines.</li>
     </ul>
   </div>
 
@@ -133,31 +132,36 @@
       <span class="date">Mar 2008 – Jul 2016</span>
     </div>
     <ul>
-      <li>Residential and commercial installation, service and repair; coordinated with general contractors, PMs, inspectors and other trades.</li>
+      <li>Residential and commercial installation, service, repair and commissioning.</li>
     </ul>
   </div>
 
   <h2>Projects</h2>
   <div class="proj">
     <div class="job-head">
-      <h3>Dreamy Dates <span>· React, Redux, Node.js, Express, Stripe, SendGrid</span></h3>
-      <span class="date"><a href="https://dreamydates.ca">dreamydates.ca</a></span>
+      <h3>Plenum <span>· Next.js, React 19, TypeScript, Tailwind CSS</span></h3>
+      <span class="date"><a href="https://plenum-fsm.netlify.app/">plenum-fsm.netlify.app</a></span>
     </div>
-    <p>Live booking platform for date experiences with its own REST API, Stripe payments and transactional email.</p>
+    <p>Field-service management for HVAC and plumbing contractors: role-based dispatch, quotes, work orders, invoicing with estimate-vs-actual margin, progress billing with BC lien holdback, and a customer portal.</p>
   </div>
   <div class="proj">
     <div class="job-head">
-      <h3>InStock <span>· React, Node.js, Express, MySQL, Knex</span></h3>
-      <span class="date"><a href="https://github.com/Martikk/warehouse-backend">github.com/Martikk/warehouse-backend</a></span>
+      <h3>Held <span>· Next.js, React 19, PostgreSQL</span></h3>
+      <span class="date"><a href="https://he1d.vercel.app/welcome">he1d.vercel.app</a></span>
     </div>
-    <p>Warehouse and inventory management app: REST API with migrations, seed data, validation, search and sorting.</p>
+    <p>Cycling training app: workouts from CP or FTP, ride import and planned-vs-actual power analysis.</p>
+  </div>
+
+  <h2>Education and Certifications</h2>
+  <div class="skills">
+    <p><b>Education:</b> Diploma, Web Development, BrainStation (2024) · IT Project Manager, IAMPM (2022) · Radio Technician, Kharkiv Engineering College (2008)</p>
+    <p><b>Certifications:</b> Procore Construction Management Professional Certificate; Construction Management and Project Management Foundations courses (LinkedIn Learning, 2025) · Plumber Red Seal challenge in progress</p>
   </div>
 
   <h2>Skills</h2>
   <div class="skills">
-    <p><b>Construction delivery:</b> Estimating, public tenders, Last Planner scheduling, RFIs, submittals, shop drawings, change orders, closeout and O&amp;M, HVAC and DDC controls, subcontractor coordination</p>
-    <p><b>Software:</b> TypeScript, JavaScript, React, Next.js, Node.js, Express, REST APIs, SQL (MySQL), Knex, Tailwind CSS, Git</p>
-    <p><b>Tools and methods:</b> Claude Code, Vercel, AWS Amplify, Figma, Agile project management, stakeholder management</p>
+    <p><b>Construction delivery:</b> Estimating and takeoffs, public tenders (BC Bid, Bonfire), procurement, Last Planner scheduling, RFIs, submittals, change orders, closeout and O&amp;M, HVAC and DDC controls, Procore, Microsoft Project</p>
+    <p><b>Software:</b> TypeScript, React, Next.js, Node.js, Express, PostgreSQL, MySQL, Tailwind CSS, Git, Claude Code, Netlify, Vercel</p>
   </div>
 </body>
 </html>

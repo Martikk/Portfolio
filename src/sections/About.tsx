@@ -1,26 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Reveal, Section } from '../components/ui';
+import { Reveal, Section, TextLink } from '../components/ui';
 
 export const About = () => (
     <Section id="about" label="About">
         <Copy>
             <Reveal as="p">
-                I’ve spent ten years running projects — first <Strong>web and mobile apps</Strong> at two
-                development agencies, now <Strong>mechanical construction</Strong> for school districts,
-                universities and public-sector owners around Vancouver. Before that I was a plumber for eight years,
-                so I know the work from the tools up.
+                I estimate and manage <Strong>mechanical construction projects</Strong> — boiler plants, chillers,
+                heat pump conversions and controls upgrades for school districts, Capilano University and other
+                public-sector owners around Vancouver. Before that I spent six years running{' '}
+                <Strong>web and mobile projects</Strong> at development agencies, and eight years as a plumber.
             </Reveal>
             <Reveal as="p" delay={60}>
-                In 2024 I started building software myself: <Strong>React and TypeScript</Strong> on the front
-                end, <Strong>Node.js, Express and SQL</Strong> behind it. Today I build with AI coding tools like
-                Claude Code every day — they let one person ship what used to take a team, and my job is knowing
-                what to build, checking what they write, and getting it in front of real users.
+                I also build the software. My employer’s website,{' '}
+                <TextLink href="https://www.alliedplumbing.ca/" target="_blank" rel="noreferrer">
+                    alliedplumbing.ca
+                </TextLink>
+                , is mine end to end and brings in real quote requests. I built{' '}
+                <TextLink href="https://plenum-fsm.netlify.app/" target="_blank" rel="noreferrer">
+                    Plenum
+                </TextLink>
+                , field-service software shaped by how a BC mechanical contractor actually dispatches, prices and
+                bills work — and <Strong>Held</Strong>, a cycling training app with a real power model behind it.
             </Reveal>
             <Reveal as="p" delay={120}>
-                That’s the combination I bring: a project manager who can read a spec, run a schedule and talk to a
-                site super — and also open an editor and build the tool. I’m most interested in software for
-                construction and the trades, where I already know the problems first-hand.
+                I work in <Strong>React, Next.js and TypeScript</Strong> with AI coding tools like Claude Code
+                every day: they let one person ship what used to take a team, and my job is knowing what to build,
+                checking what they write, and getting it in front of real users. I’m looking for construction-tech,
+                technical project management and implementation roles where both halves count.
             </Reveal>
         </Copy>
     </Section>

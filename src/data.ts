@@ -1,6 +1,7 @@
-import DreamDate from './assets/img/DreamDate.webp';
-import Video from './assets/img/Video.webp';
-import InStock from './assets/img/InStock.webp';
+import Plenum from './assets/img/Plenum.webp';
+import AlliedSite from './assets/img/AlliedSite.webp';
+import Held from './assets/img/Held.webp';
+import NCCG from './assets/img/NCCG.webp';
 
 export const EMAIL = 'alex@martishyn.ca';
 export const RESUME = `${process.env.PUBLIC_URL}/Alex-Martishyn-Technical-Project-Manager.pdf`;
@@ -19,13 +20,19 @@ export const sections = [
     { id: 'contact', label: 'Contact' },
 ] as const;
 
-/* ---------- Experience (source: LinkedIn, Nov 2026) ---------- */
+/*
+  Sources: LinkedIn (Nov 2026), Alex's own CV and 2024–2026 project list,
+  LinkedIn Learning certificates, GitHub. Unsourced percentage claims are
+  deliberately left out. Per-project dollar values stay off the site; only the
+  combined figure from the project list is used.
+*/
+
+/* ---------- Experience ---------- */
 
 export type Role = {
     period: string;
     title: string;
     org: string;
-    orgUrl?: string;
     place: string;
     summary: string;
     tags: string[];
@@ -34,30 +41,30 @@ export type Role = {
 export const experience: Role[] = [
     {
         period: '2024 — Now',
-        title: 'Project Manager, Mechanical (HVAC & Plumbing)',
+        title: 'Project Manager & Estimator, Mechanical',
         org: 'Allied Plumbing, Heating & Air Conditioning',
-        place: 'Vancouver',
+        place: 'Burnaby, BC',
         summary:
-            'Run institutional HVAC and plumbing projects from estimate to closeout — boiler plants, heat pumps and DDC controls upgrades for school districts, Capilano University and public-sector owners, often in occupied buildings.',
-        tags: ['Public tenders', 'Estimating', 'RFIs & submittals', 'Change orders', 'Closeout & O&M'],
+            'Estimate and run institutional HVAC retrofits — boiler plants, chillers, heat pump conversions and DDC controls — mostly in occupied schools and campus buildings: 8 projects, about $3.3M combined, for SD 40, SD 43, SD 48, Capilano University, Collingwood School and ICBC. I also built and run the company’s website, alliedplumbing.ca.',
+        tags: ['Public tenders', 'Estimating', 'Procurement', 'RFIs & submittals', 'Change orders', 'Procore'],
     },
     {
         period: '2022 — 2024',
-        title: 'Construction Project Manager',
+        title: 'Project Manager',
         org: 'Lionhead Mechanical',
-        place: 'Vancouver',
+        place: 'Vancouver, BC',
         summary:
-            'Managed plumbing and mechanical projects from preconstruction to closeout. Scheduled with lean pull planning and set up a central document system for drawings and project files.',
-        tags: ['Last Planner System', 'Scheduling', 'Quality & safety'],
+            'Ran concurrent plumbing and HVAC projects from tender award to completion — institutional, residential and tenant improvements — and prepared takeoffs, scope sheets and bids for projects up to $1.2M. Scheduled with Last Planner pull planning.',
+        tags: ['Takeoffs & bids', 'Last Planner', 'Site quality & safety'],
     },
     {
         period: '2019 — 2022',
         title: 'Project Manager',
-        org: 'Fourmeta Agency',
-        place: 'Vancouver',
+        org: 'Fourmeta',
+        place: 'London, UK · remote',
         summary:
-            'Led client web projects for a digital agency and built the tracking and reporting that gave clients and the team one shared view of status, scope and risk.',
-        tags: ['Agile', 'Client delivery', 'Reporting'],
+            'Ran growth projects and client delivery for B2B services: discovery calls, requirements and success criteria, tailored proposals and scopes, CRM pipeline, and clean hand-offs from sales to delivery.',
+        tags: ['Discovery', 'Proposals & scoping', 'CRM'],
     },
     {
         period: '2016 — 2019',
@@ -65,7 +72,7 @@ export const experience: Role[] = [
         org: 'ANODA — web & mobile development agency',
         place: 'New York · remote',
         summary:
-            'Took 40+ web and mobile projects from first client call to release, including work with 17 early-stage startups. Worked daily with designers and engineers on scope, estimates and timelines.',
+            'Took 40+ web and mobile projects from first client call to release, including work with 17 early-stage startups. Led cross-functional teams on scope, budget and timelines.',
         tags: ['Web & mobile', 'Startups', 'Full lifecycle'],
     },
     {
@@ -79,67 +86,106 @@ export const experience: Role[] = [
     },
 ];
 
+export const education = [
+    { year: 'In progress', title: 'Plumber Red Seal — trade challenge', org: 'SkilledTradesBC' },
+    { year: '2025', title: 'Procore Construction Management Professional Certificate', org: 'LinkedIn Learning' },
+    {
+        year: '2025',
+        title: 'Construction Management: Foundations · Planning & Scheduling · Managing Risk',
+        org: 'LinkedIn Learning (PMI REP)',
+    },
+    { year: '2025', title: 'Project Management Foundations', org: 'LinkedIn Learning (PMI REP)' },
+    { year: '2024', title: 'Diploma, Web Development', org: 'BrainStation, Vancouver' },
+    { year: '2022', title: 'IT Project Manager program', org: 'IAMPM' },
+    { year: '2008', title: 'Radio Technician', org: 'Kharkiv Engineering College' },
+];
+
 /* ---------- Projects ---------- */
 
 export type Project = {
     title: string;
+    kind: string;
     year: string;
     description: string;
     tags: string[];
     live: string;
     liveLabel: string;
-    github: string;
+    github?: string;
     image: string;
     alt: string;
 };
 
 export const projects: Project[] = [
     {
-        title: 'Dreamy Dates',
-        year: '2024',
+        title: 'Plenum',
+        kind: 'Field-service software for HVAC & plumbing contractors',
+        year: '2026',
         description:
-            'Booking platform for curated date experiences, with its own Node.js API. Couples browse ideas, leave reviews and pay with Stripe; confirmations go out through SendGrid.',
-        tags: ['React', 'Redux', 'Node.js', 'Express', 'Stripe', 'SendGrid'],
-        live: 'https://dreamydates.ca',
-        liveLabel: 'live site',
-        github: 'https://github.com/Martikk/DreamyDates',
-        image: DreamDate,
-        alt: 'Dreamy Dates home page',
+            'Dispatch, quotes, work orders, invoicing and a customer portal, designed from the workflow of a working BC mechanical contractor. Role-based workspaces, drag-and-drop dispatch, estimate-vs-actual margin on every job, and progress billing with 10% holdback per the BC Builders Lien Act.',
+        tags: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind 4', 'Zustand', 'Netlify'],
+        live: 'https://plenum-fsm.netlify.app/',
+        liveLabel: 'live demo',
+        github: 'https://github.com/Martikk/plenum',
+        image: Plenum,
+        alt: 'Plenum Today dashboard for a dispatcher',
     },
     {
-        title: 'InStock',
-        year: '2024',
+        title: 'alliedplumbing.ca',
+        kind: 'Production website for a BC mechanical contractor',
+        year: '2025',
         description:
-            'Warehouse and inventory management: a React app on top of a REST API with MySQL, Knex migrations and seed data, plus validation, search and sorting.',
-        tags: ['React', 'Node.js', 'Express', 'MySQL', 'Knex'],
-        live: 'https://www.youtube.com/watch?v=_kAHgS-aRPc',
-        liveLabel: 'video demo',
-        github: 'https://github.com/Martikk/warehouse-backend',
-        image: InStock,
-        alt: 'InStock inventory table in MySQL',
+            'The company’s main channel for quote requests, emergency calls and hiring. 42 prerendered routes, a lead-capture pipeline with server-side file checks, consent-gated analytics, PageSpeed mobile 95, and an automated check of every live route on release.',
+        tags: ['React 19', 'TypeScript', 'SSR prerender', 'Apps Script', 'AWS Amplify'],
+        live: 'https://www.alliedplumbing.ca/',
+        liveLabel: 'live site',
+        github: 'https://github.com/Martikk/AlliedPlumbing',
+        image: AlliedSite,
+        alt: 'Allied Plumbing home page',
     },
     {
-        title: 'BrainFlix',
-        year: '2024',
+        title: 'Held',
+        kind: 'Cycling training software',
+        year: '2026',
         description:
-            'Video sharing app: watch, comment on and upload videos, with a separate Express API for videos and comments.',
-        tags: ['React', 'React Router', 'Vite', 'SCSS', 'Express'],
-        live: 'https://master.d3hz3i03c78cd3.amplifyapp.com/',
+            'Plan structured workouts from CP or FTP, import rides from .fit, .tcx, .gpx and intervals.icu, compare planned intervals with recorded power and heart rate, and track power profile and training load. Installable, English and Russian, invite-only.',
+        tags: ['Next.js 16', 'React 19', 'PostgreSQL', 'Tailwind 4', 'PWA'],
+        live: 'https://he1d.vercel.app/welcome',
+        liveLabel: 'live app',
+        image: Held,
+        alt: 'Held Today dashboard with a scheduled workout',
+    },
+    {
+        title: 'NCCG',
+        kind: 'Website for a construction-industry consultancy',
+        year: '2025',
+        description:
+            'Calm, story-led brand site for Nostra Cura Consulting Group, prerendered for SEO, with contact forms delivered through a serverless function — origin check, honeypot, idempotency keys and rate limiting, no secrets in the bundle.',
+        tags: ['React 19', 'Tailwind 4', 'Netlify Functions', 'Resend'],
+        live: 'https://nccg.ca/',
         liveLabel: 'live site',
-        github: 'https://github.com/Martikk/BrainFlix',
-        image: Video,
-        alt: 'BrainFlix video page',
+        github: 'https://github.com/Martikk/nostra-cura',
+        image: NCCG,
+        alt: 'NCCG home page',
     },
 ];
 
-/* ---------- Stack: only what GitHub or LinkedIn can back up ---------- */
+/* ---------- Stack ---------- */
 
 export const stack = [
-    { title: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'SCSS', 'Redux'] },
-    { title: 'Backend & data', items: ['Node.js', 'Express', 'REST APIs', 'MySQL', 'Knex', 'Sequelize'] },
-    { title: 'AI & tooling', items: ['Claude Code', 'Git', 'Vercel', 'AWS Amplify', 'Figma'] },
     {
-        title: 'Project delivery',
-        items: ['Estimating', 'Public tenders', 'Scheduling', 'RFIs & submittals', 'Change orders', 'Closeout'],
+        title: 'Frontend',
+        items: ['React 19', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vite', 'Zustand', 'SSR / prerendering'],
+    },
+    {
+        title: 'Backend & data',
+        items: ['Node.js', 'Express', 'PostgreSQL', 'MySQL', 'Serverless functions', 'Google Apps Script', 'REST APIs'],
+    },
+    {
+        title: 'Shipping & AI',
+        items: ['Claude Code', 'Netlify', 'Vercel', 'AWS Amplify', 'Git', 'Figma'],
+    },
+    {
+        title: 'Construction delivery',
+        items: ['Estimating & takeoffs', 'Public tenders', 'Procore', 'MS Project', 'RFIs & submittals', 'Change orders', 'Closeout & O&M'],
     },
 ];
