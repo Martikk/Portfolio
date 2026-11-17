@@ -1,26 +1,41 @@
-import {Header} from "./layout/header/Header"
-import Main from "./layout/section/main/Main";
-import Skills from "./layout/section/skills/Skills";
-import Projects from "./layout/section/projects/Projects";
-import About from "./layout/section/about/About";
-import Contact from "./layout/section/contact/Contact";
-import Footer from "./layout/section/footer/Footer";
-import {ContactMe} from "./components/contactMe/ContactMe";
-import React from "react";
+import React from 'react';
+import { Header } from './sections/Header';
+import { SocialRail } from './sections/SocialRail';
+import { Hero } from './sections/Hero';
+import { Projects } from './sections/Projects';
+import { Skills } from './sections/Skills';
+import { About } from './sections/About';
+import { Contact } from './sections/Contact';
+import { Footer } from './sections/Footer';
 
 function App() {
     return (
-        <div className="App">
-            <Header/>
-            <Main/>
-            <Projects/>
-            <Skills/>
-            <About/>
-            <Contact/>
-            <Footer/>
-        </div>
+        <>
+            <SkipLink href="#works">Skip to projects</SkipLink>
+            <Header />
+            <SocialRail />
+            <main>
+                <Hero />
+                <Projects />
+                <Skills />
+                <About />
+                <Contact />
+            </main>
+            <Footer />
+        </>
     );
 }
 
-export default App;
+const SkipLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+    <a
+        href={href}
+        className="visually-hidden"
+        onFocus={e => e.currentTarget.classList.remove('visually-hidden')}
+        onBlur={e => e.currentTarget.classList.add('visually-hidden')}
+        style={{ position: 'fixed', top: 8, left: 8, zIndex: 100, padding: '8px 12px', background: '#C778DD', color: '#282C33' }}
+    >
+        {children}
+    </a>
+);
 
+export default App;
