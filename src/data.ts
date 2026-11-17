@@ -61,7 +61,7 @@ export const experience: Role[] = [
         period: '2019 — 2022',
         title: 'Project Manager',
         org: 'Fourmeta',
-        place: 'London, UK · remote',
+        place: 'London, UK',
         summary:
             'Ran growth projects and client delivery for B2B services: discovery calls, requirements and success criteria, tailored proposals and scopes, CRM pipeline, and clean hand-offs from sales to delivery.',
         tags: ['Discovery', 'Proposals & scoping', 'CRM'],
