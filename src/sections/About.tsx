@@ -1,28 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Reveal, Section, TextLink } from '../components/ui';
+import { Reveal, Section } from '../components/ui';
 
 export const About = () => (
     <Section id="about" label="About">
         <Copy>
             <Reveal as="p">
-                I’m a full-stack developer in Vancouver who likes taking an idea from a Figma frame all the way
-                to something people can actually use. Most of my work lives in{' '}
-                <Strong>React and TypeScript</Strong> on the front end and <Strong>Node.js with Express</Strong>{' '}
-                behind it, deployed on <Strong>AWS</Strong>.
+                I’ve spent ten years running projects — first <Strong>web and mobile apps</Strong> at two
+                development agencies, now <Strong>mechanical construction</Strong> for school districts,
+                universities and public-sector owners around Vancouver. Before that I was a plumber for eight years,
+                so I know the work from the tools up.
             </Reveal>
             <Reveal as="p" delay={60}>
-                Lately I’ve been building{' '}
-                <TextLink href="https://dreamydates.ca" target="_blank" rel="noreferrer">
-                    Dreamy Dates
-                </TextLink>
-                , a booking platform for couples — bookings, reviews, payments with Stripe and transactional email.
-                Before that I shipped a video-sharing app and a task manager, each with its own API.
+                In 2024 I started building software myself: <Strong>React and TypeScript</Strong> on the front
+                end, <Strong>Node.js, Express and SQL</Strong> behind it. Today I build with AI coding tools like
+                Claude Code every day — they let one person ship what used to take a team, and my job is knowing
+                what to build, checking what they write, and getting it in front of real users.
             </Reveal>
             <Reveal as="p" delay={120}>
-                I care about the details people don’t notice but feel: fast loads, interfaces that respond the
-                moment you touch them, and layouts that hold up on any screen. Right now I’m going deeper on
-                Node.js architecture and testing.
+                That’s the combination I bring: a project manager who can read a spec, run a schedule and talk to a
+                site super — and also open an editor and build the tool. I’m most interested in software for
+                construction and the trades, where I already know the problems first-hand.
             </Reveal>
         </Copy>
     </Section>

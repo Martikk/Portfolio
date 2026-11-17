@@ -21,7 +21,7 @@ export const Projects = () => (
                                 <CardLink href={p.live} target="_blank" rel="noreferrer">
                                     {p.title}
                                     <FiArrowUpRight aria-hidden />
-                                    <span className="visually-hidden"> (opens live site)</span>
+                                    <span className="visually-hidden"> (opens {p.liveLabel})</span>
                                 </CardLink>
                             </h3>
                             <p>{p.description}</p>

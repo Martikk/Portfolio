@@ -33,10 +33,10 @@ export const Contact = () => {
     return (
         <Section id="contact" label="Contact">
             <Reveal>
-                <Heading>Have a project in mind, or a role you think I’d fit?</Heading>
+                <Heading>Building software for the people who build buildings?</Heading>
                 <Lead>
-                    I’m open to full-time roles and freelance work. The fastest way to reach me is email — I usually
-                    reply within a day.
+                    I’m looking at construction-tech, technical project management and implementation roles, and I
+                    build small tools for trades businesses on the side. Email is the best way to reach me.
                 </Lead>
 
                 <Actions>

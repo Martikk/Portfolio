@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { FiArrowRight, FiCheck, FiCopy, FiExternalLink, FiHash, FiMail } from 'react-icons/fi';
-import { EMAIL, projects, sections, socials } from '../data';
+import { FiArrowRight, FiCheck, FiCopy, FiExternalLink, FiFileText, FiHash, FiMail } from 'react-icons/fi';
+import { EMAIL, projects, RESUME, sections, socials } from '../data';
 import { copyText } from '../sections/Contact';
 
 type DialogEl = HTMLElement & { open: boolean; showModal: () => void; close: () => void };
@@ -53,6 +53,13 @@ export const CommandMenu = ({ open, setOpen }: { open: boolean; setOpen: (v: boo
                 },
             },
             {
+                id: 'resume',
+                group: 'Contact',
+                label: 'Open résumé (PDF)',
+                icon: <FiFileText />,
+                run: open(RESUME),
+            },
+            {
                 id: 'mail',
                 group: 'Contact',
                 label: 'Send an email',
@@ -69,7 +76,7 @@ export const CommandMenu = ({ open, setOpen }: { open: boolean; setOpen: (v: boo
             ...projects.map(p => ({
                 id: p.title,
                 group: 'Projects',
-                label: `${p.title} — live site`,
+                label: `${p.title} — ${p.liveLabel}`,
                 icon: <FiArrowRight />,
                 run: open(p.live),
             })),

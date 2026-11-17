@@ -14,13 +14,13 @@ const renderApp = () =>
 test('renders name and role', () => {
     renderApp();
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Alex Martishyn');
-    expect(screen.getByText(/^full-stack developer$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^project manager who builds software$/i)).toBeInTheDocument();
 });
 
 test('every project links to a live site and its source', () => {
     const { container } = renderApp();
     const work = within(container.querySelector('#work') as HTMLElement);
-    const live = work.getAllByRole('link', { name: /opens live site/i });
+    const live = work.getAllByRole('link', { name: /\(opens (live site|video demo)\)/i });
     const source = work.getAllByRole('link', { name: /^source$/i });
     expect(live).toHaveLength(3);
     expect(source).toHaveLength(3);
@@ -44,4 +44,20 @@ test('copy button copies the email and confirms', async () => {
     fireEvent.click(screen.getByRole('button', { name: /copy alex@martishyn\.ca/i }));
     expect(writeText).toHaveBeenCalledWith('alex@martishyn.ca');
     expect(await screen.findByRole('button', { name: /email copied/i })).toBeInTheDocument();
+});
+
+test('experience lists every role, newest first', () => {
+    const { container } = renderApp();
+    const exp = within(container.querySelector('#experience') as HTMLElement);
+    const headings = exp.getAllByRole('heading', { level: 3 }).map(h => h.textContent);
+    expect(headings).toHaveLength(5);
+    expect(headings[0]).toMatch(/Allied Plumbing/);
+    expect(headings[4]).toMatch(/Plumber/);
+});
+
+test('résumé links point at the PDF', () => {
+    renderApp();
+    const links = screen.getAllByRole('link', { name: /résumé/i });
+    expect(links.length).toBeGreaterThanOrEqual(2);
+    links.forEach(a => expect(a.getAttribute('href')).toMatch(/Alex-Martishyn-Resume\.pdf$/));
 });

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IconLink, SocialIcon } from '../components/ui';
-import { sections, socials } from '../data';
+import { FiDownload } from 'react-icons/fi';
+import { RESUME, sections, socials } from '../data';
 import { desktop, hover } from '../styles/Theme.styled';
 
 const useActiveSection = () => {
@@ -51,14 +52,19 @@ export const Sidebar = ({ onOpenCommand }: { onOpenCommand: () => void }) => {
                 <Name>
                     <a href="#about">Alex Martishyn</a>
                 </Name>
-                <Role>Full-stack developer</Role>
+                <Role>Project manager who builds software</Role>
                 <Lede>
-                    I build fast, accessible web apps — from the React front end to the Node.js API behind it.
+                    Ten years running web and construction projects. Now I also build the tools — with React,
+                    Node.js and AI.
                 </Lede>
+
+                <Resume href={RESUME} target="_blank" rel="noreferrer">
+                    <FiDownload aria-hidden /> Résumé (PDF)
+                </Resume>
 
                 <Status>
                     <Pulse aria-hidden />
-                    Open to new opportunities · Vancouver, BC
+                    Open to construction-tech & technical PM roles
                 </Status>
 
                 <Nav aria-label="Sections">
@@ -130,11 +136,34 @@ const Lede = styled.p`
     margin-top: 16px;
 `;
 
-const Status = styled.p`
+const Resume = styled.a`
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    height: 40px;
     margin-top: 24px;
+    padding: 0 16px;
+    border: 1px solid ${p => p.theme.colors.line};
+    border-radius: 999px;
+    color: ${p => p.theme.colors.text};
+    font-size: 0.875rem;
+    font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        border-color 150ms ease,
+        transform 160ms ${p => p.theme.ease.out};
+
+    ${hover} {
+        &:hover { border-color: ${p => p.theme.colors.accent}; }
+    }
+    &:active { transform: scale(0.97); }
+`;
+
+const Status = styled.p`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
     font-family: ${p => p.theme.font.mono};
     font-size: 0.8125rem;
 `;

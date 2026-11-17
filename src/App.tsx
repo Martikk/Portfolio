@@ -4,6 +4,7 @@ import { Spotlight } from './components/ui';
 import { CommandMenu } from './components/CommandMenu';
 import { Sidebar } from './sections/Sidebar';
 import { About } from './sections/About';
+import { Experience } from './sections/Experience';
 import { Projects } from './sections/Projects';
 import { Skills } from './sections/Skills';
 import { Contact } from './sections/Contact';
@@ -20,6 +21,7 @@ function App() {
                 <Sidebar onOpenCommand={() => setCommandOpen(true)} />
                 <Main>
                     <About />
+                    <Experience />
                     <Projects />
                     <Skills />
                     <Contact />
